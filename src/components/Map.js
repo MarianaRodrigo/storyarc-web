@@ -1,27 +1,20 @@
-import { Component } from 'react';
-import ReactMapGL from 'react-map-gl';
+import react from 'react';
+import mapboxgl from 'mapbox-gl';
 
-class Map extends Component {
-  state = {
-    viewport: {
-      width: '100vw',
-      height: '100vh',
-      latitude: 41.5868,
-      longitude: -93.625,
-      zoom: 13
-    }
-  };
 
-  render() {
-    return (
-      <ReactMapGL
-        mapStyle="mapbox://styles/mapbox/streets-v9"
-        mapboxApiAccessToken="pk.eyJ1IjoiamFyYmFzNzciLCJhIjoiY2t6bGp3dzRpMmc0ZzJ2b2NhZW9mbDY3cSJ9.3RyuSgo2X-4ROsgCUIFfhQE"
-        onViewportChange={(viewport) => this.setState({ viewport })}
-        {...this.state.viewport}
-      />
-    );
-  }
+mapboxgl.accessToken = 'pk.eyJ1IjoiamFyYmFzNzciLCJhIjoiY2t6bGp2MjY5MmdtdDJub2NmYXR6ZWE3ZiJ9.7tPF-rPpXiE99xWJUVKBbg';
+
+function mapbox() {
+
+const Map = new mapboxgl.Map({
+    container: 'Map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+    });
+
+return(
+  <Map id="Map"></Map>
+)
+
 }
 
-export default Map;
+export default mapbox
