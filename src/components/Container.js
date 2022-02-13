@@ -1,11 +1,11 @@
 import React from 'react'
-import mapbox from '../components/Map';
+import Map from '../components/Map';
 
 export default function Container ({children}) {
     return(
         <div>
             <div>
-                { mapbox }
+                <Map /> 
             </div>
             <div>
                 {children}
