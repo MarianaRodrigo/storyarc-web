@@ -1,20 +1,37 @@
-import react from 'react';
+import React, { useState, useEffect } from 'react'; 
 import mapboxgl from 'mapbox-gl';
 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiamFyYmFzNzciLCJhIjoiY2t6bGp2MjY5MmdtdDJub2NmYXR6ZWE3ZiJ9.7tPF-rPpXiE99xWJUVKBbg';
 
-function mapbox() {
+function Map() {
 
-const Map = new mapboxgl.Map({
-    container: 'Map',
-    style: 'mapbox://styles/mapbox/streets-v11'
-    });
+  const [pageIsMounted, setPageIsMounted] = useState(false)
+
+useEffect(() => {
+    setPageIsMounted(true)
+      const Map = new mapboxgl.Map({
+        container: "my-map",
+        style: "mapbox://styles/mapbox/streets-v11",
+      });
+
+      Map.addControl(
+        new mapboxgl.GeolocateControl({
+          positionOptions: {
+            enableHighAccuracy: true,
+          },
+          trackUserLocation: true,
+        })
+      );
+}, [])
+
+
+
 
 return(
-  <Map id="Map"></Map>
-)
+  <div id="my-map" style={{ height: 500, width: 500 }} />
+  )
 
 }
 
-export default mapbox
+export default Map
