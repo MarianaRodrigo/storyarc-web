@@ -25,13 +25,19 @@ useEffect(() => {
       );
 }, [])
 
-
-
-
 return(
-  <div id="my-map" style={{ height: 500, width: 500 }} />
+  <div>{/*
+  <mapboxgl.MapView 
+    style={{ flex : 1 }}
+    preferredFramesPerSecond={60}
+    localizeLabels={true}
+    logoEnabled={false} 
+  >
+    <mapboxgl.Camera zoomLevel={15.31} centerCoordinate={[-8.656, 40.638]} />
+  </mapboxgl.MapView>
+*/}
+</div>
   )
-
 }
 
 export default Map
