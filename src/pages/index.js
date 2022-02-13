@@ -12,14 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="max-w-screen-xl h-screen mx-auto">
-        <img src="./images/header_logo.png" alt="storyarc logo"></img>
-        <div className="flex space-x-2">
-          <div className="bg-azul h-20 w-20"></div>
-          <div className="bg-verde h-20 w-20"></div>
-          <div className="bg-branco h-20 w-20 border border-black"></div>
-          <div className="bg-preto h-20 w-20"></div>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
         </div>
       </div>
-    </div>
   );
 }
