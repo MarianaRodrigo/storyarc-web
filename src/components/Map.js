@@ -12,7 +12,9 @@ useEffect(() => {
     setPageIsMounted(true)
       const Map = new mapboxgl.Map({
         container: "my-map",
-        style: "mapbox://styles/mapbox/streets-v11",
+        style: "mapbox://styles/mapbox/dark-v10", // Tema Dark v-10
+        center:[-8.656528, 40.628990], // Posição inicial [lng, lat]
+        zoom: 15 // Zoom Inicial
       });
 
       Map.addControl(
@@ -29,7 +31,7 @@ useEffect(() => {
 
 
 return(
-  <div id="my-map" style={{ height: 500, width: 500 }}>
+  <div id="my-map" style={{ height: 1000,  width: 1000, }}>
  
  {/*
     <mapboxgl.MapView 
