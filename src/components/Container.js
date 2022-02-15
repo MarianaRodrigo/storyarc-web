@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Map from "./Map";
+import MapBoxMap from "./MapBoxMap";
 
 export default function Container({ children }) {
   return (
@@ -11,15 +11,11 @@ export default function Container({ children }) {
           content="O storyarc é uma plataforma de arquivo de conteúdos que pressupõe a partilha e consulta de informações relativas a espaços e à sua evolução ao longo dos anos, de modo a preservar a memória patrimonial do distrito de Aveiro."
         />
         <link rel="icon" href="/favicon.ico" />
-        <link
-          href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
-          rel="stylesheet"
-        />
       </Head>
-      <div className="w-9/12">
-        <Map />
+      <div className="hidden sm:inline-flex flex-auto">
+        <MapBoxMap />
       </div>
-      <div className="w-3/12">{children}</div>
+      <div className="min-w-[400px]">{children}</div>
     </div>
   );
 }

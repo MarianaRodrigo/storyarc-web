@@ -1,6 +1,6 @@
 import "../styles/globals.css";
-import Container from "../components/Container";
 import "mapbox-gl/dist/mapbox-gl.css";
+import Container from "../components/Container";
 
 function MyApp({ Component, pageProps }) {
   return (
