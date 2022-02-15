@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Map, { locations} from "./Map";
+import Map from "./Map";
 
 export default function Container({ children }) {
   return (
@@ -17,7 +17,7 @@ export default function Container({ children }) {
         />
       </Head>
       <div className="w-9/12">
-        <Map locations={locations}/>
+        <Map />
       </div>
       <div className="w-3/12">{children}</div>
     </div>
