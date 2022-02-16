@@ -1,0 +1,19 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
+
+function SubHeader() {
+    return (
+        <div className="flex mt-10 ml-3">
+            <div className="flex">
+                <FontAwesomeIcon className="w-5" icon={faLocationDot} />
+                <h1 className="ml-2 mt-1">Universidade de Aveiro</h1>
+            </div>
+            <div className="flex justify-end">
+                <FontAwesomeIcon className="w-8" icon={faCirclePlus} />
+            </div>
+        </div>
+    )
+}
+
+export default SubHeader;
