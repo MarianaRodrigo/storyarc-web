@@ -6,7 +6,7 @@ import Card from "../components/Card";
 export default function Home() {
   return (
     <div className="font-body">
-      <div className="flex">
+      <div className="flex mt-3 px-4 items-center">
         <Header />
         <Search />
       </div>
