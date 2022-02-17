@@ -9,7 +9,7 @@ function SubHeader() {
                 <FontAwesomeIcon className="w-5" icon={faLocationDot} />
                 <h1 className="ml-2 mt-1">Universidade de Aveiro</h1>
             </div>
-            <div className="flex justify-end">
+            <div className="flex ml-auto">
                 <FontAwesomeIcon className="w-8" style={{color: '#37b780'}} icon={faCirclePlus} />
             </div>
         </div>
