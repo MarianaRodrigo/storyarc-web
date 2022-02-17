@@ -1,18 +1,16 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-function Header () {
-    return (
-       <div className="object-cover h-48 w-96">
-           <Image 
-            src='/images/logo.png' 
-            alt="Storyarc Logo"
-            width="123px"
-            height="29px"
-            layout="responsive" 
-            priority
-            />
-       </div>
-    )
+function Header() {
+  return (
+    <div className="h-9 w-40 relative flex-none">
+      <Image
+        src="/images/logo.png"
+        alt="Storyarc Logo"
+        layout="fill"
+        priority
+      />
+    </div>
+  );
 }
 
 export default Header;
