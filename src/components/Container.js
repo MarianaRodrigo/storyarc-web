@@ -15,7 +15,7 @@ export default function Container({ children }) {
       <div className="hidden sm:inline-flex flex-auto">
         <MapBoxMap />
       </div>
-      <div className="min-w-[400px]">{children}</div>
+      <div className="w-[400px]">{children}</div>
     </div>
   );
 }
