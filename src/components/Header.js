@@ -1,16 +1,12 @@
-import Image from "next/image";
+import React from "react";
+import Logo from "./Logo";
+import Search from "./Search";
 
-function Header() {
+export default function Header() {
   return (
-    <div className="h-7 w-28 relative flex-none">
-      <Image
-        src="/images/logo.png"
-        alt="Storyarc Logo"
-        layout="fill"
-        priority
-      />
+    <div className="flex mt-3 px-4 items-center">
+      <Logo />
+      <Search />
     </div>
   );
 }
-
-export default Header;
