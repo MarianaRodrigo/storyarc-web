@@ -1,4 +1,9 @@
+import db from "../../db.json";
+
 function Card({post}) {
+
+    const user = db.users.find((user) => user.id === post.userId);
+
     return (
         <div className="pr-4 mx-4 mt-10 bg-white shadow-xl flex border rounded-lg">
             <div className="basis-2/5 rounded-l-lg" 
