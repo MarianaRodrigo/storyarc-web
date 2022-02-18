@@ -3,6 +3,10 @@ import Search from "../components/Search";
 import SubHeader from "../components/SubHeader";
 import Card from "../components/Card";
 
+import db from "../../db.json";
+
+const content = db.posts;
+
 export default function Home() {
   return (
     <div className="font-body">
@@ -11,7 +15,9 @@ export default function Home() {
         <Search />
       </div>
       <SubHeader />
-      <Card />
+      {content.map((post) => (
+      <Card key={post.id} post={post} />
+      ))}
     </div>
   );
 }

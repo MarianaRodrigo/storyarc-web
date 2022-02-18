@@ -1,10 +1,3 @@
-import db from "../../db.json";
-const content = db.posts;
-  console.log(content);
-{content.map((post) => (
-    <Card key={post.id} post={post} />
-  ))}
-
 function Card({post}) {
     return (
         <div className="pr-4 mx-4 mt-10 bg-white shadow-xl flex border rounded-lg">
