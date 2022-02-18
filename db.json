@@ -7,10 +7,11 @@
       "title": "Escola Secundária José Estevão",
       "description": "A Escola Secundária José Estevão na década de 60",
       "photo": "https://pbs.twimg.com/media/FLLvDlgWQAgXoqc?format=jpg&name=900x900",
+      "altimg": "Escola Secundária José Estevão",
       "new_photo": null,
       "location": [40.6376416868948, -8.648330328603409],
       "contentDate": "1960",
-      "postDate": "2017-12-2"
+      "createdAt": "2022-02-16T19:36:41.388Z"
     },
     {
       "id": 2,
@@ -19,10 +20,11 @@
       "title": "Ponte de Carcavelos",
       "description": null,
       "photo": "https://i.pinimg.com/originals/6e/d1/f9/6ed1f92bac7709c9b772e0011db2d099.jpg",
+      "altimg":"Ponte de Carcavelos",
       "new_photo": "https://3.bp.blogspot.com/-sAA0poxFWe4/Wt-7FJWcp1I/AAAAAAAAHOc/dqDLRKuaYbEsZMywCQlk7mdRzBLCR4beQCLcBGAs/s1600/IMG_20180421_174012.jpg",
       "location": [40.6453974473121, -8.654480643946753],
       "contentDate": "1960",
-      "postDate": "2017-12-2"
+      "createdAt": "2022-02-16T19:36:41.388Z"
     },
     {
       "id": 3,
@@ -31,10 +33,11 @@
       "title": "Praça do comércio",
       "description": null,
       "photo": "https://pbs.twimg.com/media/FKx_HAJXIAMe8Ua?format=jpg&name=medium",
+      "altimg":"Praça do comércio",
       "new_photo": null,
       "location": [40.64168732868854, -8.653957347150298],
       "contentDate": "1960",
-      "postDate": "2017-12-2"
+      "createdAt": "2022-02-16T19:36:41.388Z"
     }
   ],
   "users": [
