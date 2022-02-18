@@ -1,4 +1,5 @@
 import db from "../../db.json";
+import { timeSince } from "../../utils/timeSince";
 
 function Card({post}) {
 
@@ -21,8 +22,8 @@ function Card({post}) {
                 <div className="flex items-center pt-5 pl-3">
                     <img img key={post.id} className="w-9 h-9 rounded-full mr-4" src={post.photo} alt={post.altimg}/>
                     <div>
-                        <p key={post.id} className="text-black text-sm leading-none mt-1">{post.userId}</p>
-                        <p key={post.id} className="text-gray-400 text-xs mt-1">{post.createdAt}</p>
+                        <p key={post.id} className="text-black text-sm leading-none mt-1">{user.name}</p>
+                        <p key={post.id} className="text-gray-400 text-xs mt-1">{timeSince(post.postDate)}</p>
                     </div>
                 </div>
             </div>
