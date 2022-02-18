@@ -18,6 +18,7 @@ export default function Home() {
           <Card key={post.id} post={post} />
         ))}
       </FeedContainer>
+      <Footer />
     </>
   );
 }

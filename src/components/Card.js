@@ -10,15 +10,15 @@ function Card({ post }) {
         className="w-2/5 rounded-l-lg"
         style={{
           backgroundImage: `url(${post.photo})`,
-          backgroundSize: "130%",
+          backgroundSize: "180%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
         }}
       ></div>
-      <div className="w-3/5 py-3">
+      <div className="w-3/5 py-5">
         <div className="flex space-between">
-          <h1 key={post.id} className="flex flex-grow pl-3 font-medium">
-            {post.title}
+          <h1 key={post.id} className="flex flex-grow pl-3 font-medium cursor-pointer" title={post.title}>
+            {post.title.slice(0, 17)}{post.title.length > 17 ? '...' : ''}
           </h1>
           <svg
             className="w-6 h-6 flex-none"
