@@ -1,5 +1,6 @@
 import db from "../../db.json";
-
+const content = db.posts;
+  console.log(content);
 {content.map((post) => (
     <Card key={post.id} post={post} />
   ))}
