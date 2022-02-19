@@ -22,7 +22,7 @@ export default function MapBoxMap() {
       logoPosition="bottom-right"
       >
 
-    <Link href={`/Posts/${encodeURIComponent(posts.location)}`}>
+    {/*<Link href={`/Posts/${encodeURIComponent(posts.location)}`}> */}
     {posts.map((post) => (      
       <Marker 
           longitude={-8.656528} 
@@ -36,7 +36,7 @@ export default function MapBoxMap() {
         <img src="/images/Marker.png" alt="Marker map png"/>
       </Marker> 
     ))}
-    </Link>
+    {/*</Link>*/}
   </Map>  
   );
 }
