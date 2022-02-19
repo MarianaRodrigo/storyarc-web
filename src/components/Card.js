@@ -39,7 +39,7 @@ function Card({ post }) {
           <img
             className="w-9 h-9 rounded-full"
             src={post.photo}
-            alt={post.altimg}
+            alt={post.description}
           />
           <div>
             <p className="text-black text-sm leading-none mt-1">{user.name}</p>
