@@ -4,7 +4,7 @@ import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
-    <div className="py-4 flex px-4 shadow-inner w-full absolute bottom-0 bg-[#37b780] text-white">
+    <div className="py-4 flex px-4 shadow-inner w-full bg-[#37b780] text-white">
       <div className="flex flex-grow">
         <FontAwesomeIcon className="w-5" icon={faUser} />
         <h1 className="ml-2 mt-1 font-light">Iniciar Sessão</h1>
