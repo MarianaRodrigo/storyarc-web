@@ -20,6 +20,8 @@ export default function MapBoxMap() {
       mapStyle="mapbox://styles/mapbox/outdoors-v11"
       logoPosition="bottom-right"
       >
+
+      
     {posts.map((post) => (
       <Marker 
           longitude={-8.656528} 
