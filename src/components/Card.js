@@ -5,7 +5,7 @@ function Card({ post }) {
   const user = db.users.find((user) => user.id === post.userId); // pesquisa quem é o dono do post
 
   return (
-    <div className="pr-4 mx-4  bg-white shadow-xl flex border rounded-lg">
+    <div className="pr-4 mx-4 h-36 bg-white shadow-xl flex border rounded-lg">
       <div
         className="w-2/5 rounded-l-lg"
         style={{
@@ -15,10 +15,10 @@ function Card({ post }) {
           backgroundPosition: "center",
         }}
       ></div>
-      <div className="w-3/5 py-5">
-        <div className="flex space-between">
-          <h1 key={post.id} className="flex flex-grow pl-3 font-medium cursor-pointer" title={post.title}>
-            {post.title.slice(0, 17)}{post.title.length > 17 ? '...' : ''}
+      <div className="w-3/5 flex flex-col justify-between py-2">
+        <div className="flex justify-between">
+          <h1 className="flex flex-grow pl-3 font-medium text-md cursor-pointer">
+            {post.title}
           </h1>
           <svg
             className="w-6 h-6 flex-none"
@@ -38,16 +38,13 @@ function Card({ post }) {
         <div className="flex items-center pt-5 pl-3 space-x-2">
           <img
             img
-            key={post.id}
             className="w-9 h-9 rounded-full"
             src={post.photo}
             alt={post.altimg}
           />
           <div>
-            <p key={post.id} className="text-black text-sm leading-none mt-1">
-              {user.name}
-            </p>
-            <p key={post.id} className="text-gray-400 text-xs">
+            <p className="text-black text-sm leading-none mt-1">{user.name}</p>
+            <p className="text-gray-400 text-xs">
               Publicado {timeSince(post.createdAt)}
             </p>
           </div>
