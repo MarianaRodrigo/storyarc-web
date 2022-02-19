@@ -29,15 +29,14 @@ function Card({ post }) {
           >
             <path
               strokeLinecap="round"
-              strokelinejoin="round"
-              strokewidth="2"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
             ></path>
           </svg>
         </div>
         <div className="flex items-center pt-5 pl-3 space-x-2">
           <img
-            img
             className="w-9 h-9 rounded-full"
             src={post.photo}
             alt={post.altimg}
