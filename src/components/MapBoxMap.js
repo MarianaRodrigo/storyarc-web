@@ -1,13 +1,10 @@
-import Map, {Marker} from "react-map-gl";
+/* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
+import Map, { Marker } from "react-map-gl";
 import db from "../../db.json";
-import Link from 'next/link'
-
-
 
 export default function MapBoxMap() {
-
-  const posts = db.posts;
-
+  const locations = db.locations;
 
   return (
     <Map
@@ -17,26 +14,38 @@ export default function MapBoxMap() {
         latitude: 40.62899,
         zoom: 15.31,
       }}
-      style={{ width: "100%", height: "100%" }}
+      className="w-full h-full"
       mapStyle="mapbox://styles/mapbox/outdoors-v11"
       logoPosition="bottom-right"
-      >
-
-    {/*<Link href={`/Posts/${encodeURIComponent(posts.location)}`}> */}
-    {posts.map((post) => (      
-      <Marker 
-          longitude={-8.656528} 
-          latitude={40.62899}
-          id={`${post.id}`}
-          key={post.id}
-          
-          /*coordinate={[posts.location[0], posts.location[0]]} */ 
-          
+    >
+      {locations.map((location) => (
+        <Marker
+          longitude={location.coordinates[1]}
+          latitude={location.coordinates[0]}
+          key={location.id}
+        >
+          <Link
+            href={{
+              pathname: "post",
+              query: {
+                parametro1: "banana",
+                parametro2: "banaan2",
+                random: "banaan2",
+                qwerty: "banaan2",
+                sporting: "campeão",
+              },
+            }}
+            as="post"
+            passHref
           >
-        <img src="/images/Marker.png" alt="Marker map png"/>
-      </Marker> 
-    ))}
-    {/*</Link>*/}
-  </Map>  
+            <img
+              className="cursor-pointer"
+              src="/images/Marker.png"
+              alt="Marker map png"
+            />
+          </Link>
+        </Marker>
+      ))}
+    </Map>
   );
 }
