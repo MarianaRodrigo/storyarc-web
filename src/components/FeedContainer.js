@@ -1,7 +1,18 @@
+import { Transition } from "@headlessui/react";
 export default function FeedContainer({ children }) {
   return (
-    <div className="flex-1 w-full h-full space-y-4 pb-6 overflow-y-scroll overscroll-y-contain scroll-smooth">
+    <Transition
+      appear={true}
+      show={true}
+      enter="transition ease duration-700 transform"
+      enterFrom="opacity-0 translate-x-full"
+      enterTo="opacity-100 translate-x-0"
+      leave="transition ease duration-1000 transform"
+      leaveFrom="opacity-100 translate-x-0"
+      leaveTo="opacity-0 translate-x-full"
+      className="flex-1 w-full h-full space-y-4 pb-6 overflow-y-scroll overscroll-y-contain scroll-smooth"
+    >
       {children}
-    </div>
+    </Transition>
   );
 }
