@@ -26,7 +26,7 @@ export default function MapBoxMap() {
         >
           <Link
             href={{
-              pathname: "post",
+              pathname: "LocationPost",
               query: {
                 rua: location.name,
               },
