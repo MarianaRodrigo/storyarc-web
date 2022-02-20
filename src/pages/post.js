@@ -13,12 +13,16 @@ export default function Post() {
   console.log(matchedPosts);
 
   return (
-    <div className="flex-1">
+    <>
       <div className="mx-4 my-6 leading-loose">
-        <h1 className="text-base font-light tracking-wide pb-2">Publicações em</h1>
+        <h1 className="text-base font-light tracking-wide pb-2">
+          Publicações em
+        </h1>
         <div className="flex">
           <FontAwesomeIcon className="w-5" icon={faLocationDot} />
-          <h1 className="text-xl tracking-wide font-medium px-2">{router.query.rua}</h1>
+          <h1 className="text-xl tracking-wide font-medium px-2">
+            {router.query.rua}
+          </h1>
         </div>
       </div>
       <FeedContainer>
@@ -26,6 +30,6 @@ export default function Post() {
           <Card key={post.id} post={post} />
         ))}
       </FeedContainer>
-    </div>
+    </>
   );
 }
