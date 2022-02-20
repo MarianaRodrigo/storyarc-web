@@ -20,7 +20,7 @@
       "title": "Ponte dos Carcavelos",
       "description": null,
       "photo": "https://i.pinimg.com/originals/6e/d1/f9/6ed1f92bac7709c9b772e0011db2d099.jpg",
-      "altimg":"Ponte dos Carcavelos",
+      "altimg": "Ponte dos Carcavelos",
       "new_photo": "https://3.bp.blogspot.com/-sAA0poxFWe4/Wt-7FJWcp1I/AAAAAAAAHOc/dqDLRKuaYbEsZMywCQlk7mdRzBLCR4beQCLcBGAs/s1600/IMG_20180421_174012.jpg",
       "location": [40.6453062, -8.6545539],
       "contentDate": "1960",
@@ -33,7 +33,7 @@
       "title": "Praça do comércio",
       "description": null,
       "photo": "https://pbs.twimg.com/media/FKx_HAJXIAMe8Ua?format=jpg&name=medium",
-      "altimg":"Praça do comércio",
+      "altimg": "Praça do comércio",
       "new_photo": null,
       "location": [40.6412445, -8.6545913],
       "contentDate": "1960",
@@ -47,7 +47,7 @@
       "title": "Universidade de Aveiro",
       "description": null,
       "photo": "https://api-assets.ua.pt/v1/image/resizer?imageUrl=https://www.ua.pt/contents%2Fimgs%2Fabout%2Fhistoria_ua_1980_5.jpg&width=1200",
-      "altimg":"Universidade de Aveiro",
+      "altimg": "Universidade de Aveiro",
       "new_photo": null,
       "location": [40.6412445, -8.6545913],
       "contentDate": "2005",
@@ -70,11 +70,11 @@
       "avatar": "https://randomuser.me/api/portraits/women/3.jpg"
     },
     {
-      "id":3,
+      "id": 3,
       "name": "Paula Cardodoso",
-      "password":"123",
-      "email":"paulacardoso@gmail.com",
-      "avatar":"https://randomuser.me/api/portraits/women/79.jpg"
+      "password": "123",
+      "email": "paulacardoso@gmail.com",
+      "avatar": "https://randomuser.me/api/portraits/women/79.jpg"
     },
     {
       "id": 4,
@@ -173,21 +173,24 @@
       "name": "Universidade de Aveiro",
       "data": "23-4-2020",
       "photo": "https://www.eurodicas.com.br/wp-content/uploads/2021/07/universidade-de-aveiro-1200x675.jpg",
-      "address":"Universidade de Aveiro, 3810-193 Aveiro"
+      "address": "Universidade de Aveiro, 3810-193 Aveiro",
+      "coordinates": [40.630611648811644, -8.657494288431876]
     },
     {
       "id": 2,
       "name": "Escola Secundária José Estevão",
       "data": "24-7-2019",
       "photo": "https://parque-escolar.pt/docs/escolas/antes/061/061-1003.jpg",
-      "address":"Avenida 25 de Abril, 3811-901 Aveiro"
+      "address": "Avenida 25 de Abril, 3811-901 Aveiro",
+      "coordinates": [40.63771205702211, -8.648373106456553]
     },
     {
       "id": 3,
       "name": "Teatro Aveirense",
       "data": "20-10-2015",
       "photo": "https://www.teatroaveirense.pt/imagens/noticias/teatro_aveirense_reabre_portas6130b0e8279dc.jpg",
-      "address":"Rua Belém do Pará, 3810-009 Aveiro"
+      "address": "Rua Belém do Pará, 3810-009 Aveiro",
+      "coordinates": [40.640864419578264, -8.654164401922849]
     }
   ]
 }

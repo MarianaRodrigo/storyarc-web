@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import db from "../../db.json";
 import { timeSince } from "../../utils/timeSince"; //para calcular há quanto tempo foi publicado o post
 
@@ -37,14 +38,19 @@ function Card({ post }) {
         </div>
         <div className="flex items-center pt-5 pl-3 space-x-2">
           <img
-            className="w-9 h-9 rounded-full"
+            className="w-10 h-10 rounded-full"
             src={post.photo}
             alt={post.description}
           />
-          <div>
-            <p className="text-black text-sm leading-none mt-1">{user.name}</p>
-            <p className="text-gray-400 text-xs">
-              Publicado {timeSince(post.createdAt)}
+          <div className="space-y-[0.10rem]">
+            <p className="text-black text-xs font-medium tracking-wide leading-none">
+              {user.name}
+            </p>
+            <p className="text-gray-400  tracking-wide text-[0.70rem]">
+              Publicado{" "}
+              {timeSince(post.createdAt) === "ontem"
+                ? timeSince(post.createdAt)
+                : "há " + timeSince(post.createdAt)}
             </p>
           </div>
         </div>

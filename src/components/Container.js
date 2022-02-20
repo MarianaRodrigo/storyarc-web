@@ -3,7 +3,7 @@ import MapBoxMap from "./MapBoxMap";
 
 export default function Container({ children }) {
   return (
-    <div className="flex w-screen h-screen">
+    <div className="flex w-screen h-screen antialiased">
       <Head>
         <title>storyarc</title>
         <meta

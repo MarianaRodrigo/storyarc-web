@@ -2,15 +2,17 @@ import { useState } from "react";
 // import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 export default function Search() {
-  // const [value, setValue] = useState(null);
-  // console.log(value);
+  const [value, setValue] = useState(null);
+  console.log(value);
   return (
-    <div className="flex-grow pl-2 h-10">
-      <div className="w-full h-full bg-white drop-shadow-xl rounded-lg items-center justify-center">
+    <div className="flex-grow h-14 border-[0.5px] rounded-lg shadow-md transition-transform">
+      <div className="w-full h-full bg-white rounded-lg">
         <input
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
           type="text"
           placeholder="Pesquisar por locais"
-          className="w-full h-full rounded-lg px-4 text-sm font-light tracking-wide outline-none"
+          className="w-full h-full rounded-lg px-4 text-sm font-light tracking-wider outline-none"
         />
       </div>
     </div>
