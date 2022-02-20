@@ -10,8 +10,8 @@ export default function MapBoxMap() {
     <Map
       mapboxAccessToken={process.env.mapbox_key}
       initialViewState={{
-        longitude: -8.656528,
-        latitude: 40.62899,
+        longitude: -8.65362,
+        latitude: 40.6412,
         zoom: 15.31,
       }}
       className="w-full h-full"

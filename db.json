@@ -71,8 +71,8 @@
       "createdAt": "2022-02-15T19:36:41.388Z"
     },
     {
-      "id": 6,
-      "userId": 4,
+      "id": 14,
+      "userId": 8,
       "postType": "foto",
       "title": "Primeiro edifício do liceu, hoje a Sec.ª Homem Cristo. ",
       "description": "Primeiro edifício do liceu, hoje a Sec.ª Homem Cristo.",
@@ -86,7 +86,7 @@
     },
     {
       "id": 6,
-      "userId": 2,
+      "userId": 6,
       "postType": "foto",
       "title": "Sala do Despacho, Sacristia e Arrecadações. ",
       "description": "Sala do Despacho, Sacristia e arrecadações",
@@ -100,7 +100,7 @@
     },
     {
       "id": 7,
-      "userId": 1,
+      "userId": 7,
       "postType": "foto",
       "title": "Edifício principal do Liceu de José Estevão ",
       "description": "A Escola Secundária José Estevão no ano de 1927",
@@ -167,6 +167,34 @@
       "streetName": "Universidade de Aveiro",
       "contentDate": "1990",
       "createdAt": "2022-02-12T19:36:41.388Z"
+    },
+    {
+      "id": 12,
+      "userId": 8,
+      "postType": "foto",
+      "title": "Teatro Aveirense Antigamente",
+      "description": null,
+      "photo": "https://www.zarllor.com/wp-content/uploads/2020/03/90965756_679565672806062_7312032674595969853_n.jpg",
+      "altimg": "Teatro Aveirense Antigamente",
+      "new_photo": null,
+      "location": [40.640864419578264, -8.654164401922849],
+      "streetName": "Teatro Aveirense",
+      "contentDate": "1950",
+      "createdAt": "2022-02-17T19:36:41.388Z"
+    },
+    {
+      "id": 13,
+      "userId": 9,
+      "postType": "foto",
+      "title": "Teatro Aveirense Antigamente",
+      "description": null,
+      "photo": "https://www.teatroaveirense.pt/imagens/galeria/historia_5f36b733ae0ab.png",
+      "altimg": "Teatro Aveirense Antigamente",
+      "new_photo": null,
+      "location": [40.640864419578264, -8.654164401922849],
+      "streetName": "Teatro Aveirense",
+      "contentDate": "1950",
+      "createdAt": "2022-02-17T19:36:41.388Z"
     }
   ],
   "users": [
@@ -204,6 +232,34 @@
       "password": "123",
       "email": "ua@ua.com",
       "avatar": "https://eduportugal.eu/wp-content/uploads/2020/07/Logo_Institucional_Universidade-de-Aveiro--263x263.png"
+    },
+    {
+      "id": 6,
+      "name": "Gary Sims",
+      "password": "123",
+      "email": "GarySims@gmail.com",
+      "avatar": "https://randomuser.me/api/portraits/men/28.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Willie Russell",
+      "password": "123",
+      "email": "Willie@gmail.com",
+      "avatar": "https://randomuser.me/api/portraits/women/2.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Helena Barbosa",
+      "password": "123",
+      "email": "HelenaBarbosa@gmail.com",
+      "avatar": "https://randomuser.me/api/portraits/women/28.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Teatro Aveirense*",
+      "password": "123",
+      "email": "TeatroAveirense@gmail.com",
+      "avatar": "https://reencontrosdemusicacontemporanea.pt/2017/images/apoios/TA.png"
     }
   ],
   "comments": [
