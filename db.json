@@ -9,6 +9,7 @@
       "photo": "https://pbs.twimg.com/media/FLLvDlgWQAgXoqc?format=jpg&name=900x900",
       "altimg": "Escola Secundária José Estevão",
       "new_photo": null,
+      "streetName": "Escola Secundária José Estevão",
       "location": [40.63831645, -8.647869497033895],
       "contentDate": "1960",
       "createdAt": "2022-02-18T19:36:41.388Z"
@@ -50,6 +51,7 @@
       "altimg": "Universidade de Aveiro",
       "new_photo": null,
       "location": [40.6412445, -8.6545913],
+      "streetName": "Universidade de Aveiro",
       "contentDate": "2005",
       "createdAt": "2022-02-22T19:36:41.388Z"
     }
