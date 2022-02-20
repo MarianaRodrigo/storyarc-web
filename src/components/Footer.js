@@ -1,10 +1,21 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Transition } from "@headlessui/react";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
-    <div className="flex px-4 h-16 items-center justify-between shadow-inner w-full bg-[#37b780] text-white">
+    <Transition
+      appear={true}
+      show={true}
+      enter="transition ease duration-700 transform"
+      enterFrom="opacity-0 translate-y-full"
+      enterTo="opacity-100 translate-y-0"
+      leave="transition ease duration-1000 transform"
+      leaveFrom="opacity-100 translate-y-0"
+      leaveTo="opacity-0 translate-y-full"
+      className="flex px-4 h-16 items-center justify-between shadow-inner w-full bg-[#37b780] text-white"
+    >
       <div className="flex flex-grow space-x-2">
         <FontAwesomeIcon className="w-6 h-6" icon={faUser} />
         <h1 className="font-light tracking-wide">Iniciar Sessão</h1>
@@ -30,7 +41,7 @@ function Footer() {
           d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
         ></path>
       </svg>
-    </div>
+    </Transition>
   );
 }
 
