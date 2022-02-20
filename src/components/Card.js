@@ -39,8 +39,8 @@ function Card({ post }) {
         <div className="flex items-center pt-5 pl-3 space-x-2">
           <img
             className="w-10 h-10 rounded-full"
-            src={post.photo}
-            alt={post.description}
+            src={user.avatar}
+            alt={post.name}
           />
           <div className="space-y-[0.10rem]">
             <p className="text-black text-xs font-medium tracking-wide leading-none">

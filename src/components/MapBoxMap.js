@@ -28,11 +28,7 @@ export default function MapBoxMap() {
             href={{
               pathname: "post",
               query: {
-                parametro1: "banana",
-                parametro2: "banaan2",
-                random: "banaan2",
-                qwerty: "banaan2",
-                sporting: "campeão",
+                rua: location.name,
               },
             }}
             as="post"
