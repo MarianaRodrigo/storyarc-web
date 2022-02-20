@@ -26,12 +26,12 @@ export default function MapBoxMap() {
         >
           <Link
             href={{
-              pathname: "LocationPost",
+              pathname: `/search/${location.name}`,
               query: {
                 rua: location.name,
               },
             }}
-            as="post"
+            as={`/search/${location.name}`}
             passHref
           >
             <img
