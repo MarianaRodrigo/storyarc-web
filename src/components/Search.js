@@ -2,7 +2,7 @@ import { useState } from "react";
 // import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 
 export default function Search() {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState("");
   console.log(value);
   return (
     <div className="flex-grow h-14 border-[0.5px] rounded-lg shadow-md transition-transform">
