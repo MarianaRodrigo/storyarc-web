@@ -31,7 +31,7 @@ export default function MapBoxMap() {
                 rua: location.name,
               },
             }}
-            as="post"
+            as="locationpost"
             passHref
           >
             <img
