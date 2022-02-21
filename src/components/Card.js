@@ -64,7 +64,7 @@ export default function Card({ post }) {
           </div>
         </div>
       </div>
-      </div>
+    </Link>
   );
 }
 
