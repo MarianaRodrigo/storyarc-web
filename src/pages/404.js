@@ -1,19 +1,47 @@
-import Link from 'next/link'
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { Transition } from "@headlessui/react";
 
 export default function Custom404() {
+  const router = useRouter();
+  function handleClick() {
+    router.push("/");
+  }
   return (
-    <div className="flex-1">
-      <div className="flex flex-col items-center">
-        <h1 className="flex justify-center font-semibold tracking-widest text-xl" style={{ color: "#37b780" }}>Pareces estar perdido na historia</h1>
-        <img className="flex m-auto w-64 mt-6" src="./images/ampulheta.png" alt="ampulheta erro 404" />
-        <div className="flex justify-center mt-6">
-          <h3 className="font-normal tracking-widest mr-2 text-gray-500">Clica </h3>
-          <Link href="/"  passHref>
-          <button className="rounded px-5 py-1 tracking-widest font-semibold" style={{ backgroundColor: "#37b780", color: "white" }} type="button"> aqui </button>
-          </Link>
-          <h3 className="font-normal tracking-widest ml-2 text-gray-500">para voltares ao presente.</h3>
+    <Transition
+      appear={true}
+      show={true}
+      enter="transition ease duration-700 transform"
+      enterFrom="opacity-0 scale-0"
+      enterTo="opacity-100 scale-1"
+      leave="transition ease duration-1000 transform"
+      leaveFrom="opacity-100 translate-x-0"
+      leaveTo="opacity-0 translate-x-full"
+      className="flex flex-col items-center space-between flex-1 py-10"
+    >
+      <p className="font-semibold tracking-widest text-xl text-[#37b780]">
+        Pareces estar perdido na historia
+      </p>
+      <div className="flex-1 flex h-full items-center">
+        <div className="w-64 h-64 relative">
+          <Image
+            src="/images/ampulheta.png"
+            alt="ampulheta"
+            layout="fill"
+            priority
+          />
         </div>
       </div>
-    </div>
-  )
+      <p className="font-normal tracking-widest text-gray-500">
+        Clica
+        <span
+          onClick={handleClick}
+          className="rounded px-4 py-2 mx-2 bg-[#37b780] text-white tracking-widest font-semibold cursor-pointer shadow-xl"
+        >
+          aqui
+        </span>
+        para voltares ao presente
+      </p>
+    </Transition>
+  );
 }
