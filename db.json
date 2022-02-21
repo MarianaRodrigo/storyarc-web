@@ -71,20 +71,6 @@
       "createdAt": "2022-02-15T19:36:41.388Z"
     },
     {
-      "id": 14,
-      "userId": 8,
-      "postType": "foto",
-      "title": "Primeiro edifício do liceu, hoje a Sec.ª Homem Cristo. ",
-      "description": "Primeiro edifício do liceu, hoje a Sec.ª Homem Cristo.",
-      "photo": "http://ww3.aeje.pt/avcultur/Secjeste/MuseuSecJE/Imagens/Licave1927A.jpg",
-      "altimg": "Escola Secundária José Estevão",
-      "new_photo": null,
-      "streetName": "Escola Secundária José Estevão",
-      "location": [40.63831645, -8.647869497033895],
-      "contentDate": "1920",
-      "createdAt": "2022-02-18T19:36:41.388Z"
-    },
-    {
       "id": 6,
       "userId": 6,
       "postType": "foto",
