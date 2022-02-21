@@ -6,7 +6,7 @@ function Card({ post }) {
   const user = db.users.find((user) => user.id === post.userId); // pesquisa quem é o dono do post
 
   return (
-    <div className="pr-4 mx-4 h-36 bg-white shadow-xl flex border rounded-lg">
+    <div className=" hover:scale-95 ease-out duration-300 cursor-pointer pr-4 mx-4 h-36 bg-white shadow-xl flex border rounded-lg">
       <div
         className="w-2/5 rounded-l-lg"
         style={{
