@@ -34,12 +34,12 @@ export default function Custom404() {
       </div>
       <p className="font-normal tracking-widest text-gray-500">
         Clica
-        <span
+        <button
           onClick={handleClick}
-          className="rounded px-4 py-2 mx-2 bg-[#37b780] text-white tracking-widest font-semibold cursor-pointer shadow-xl"
+          className="rounded px-4 py-2 mx-2 bg-[#37b780] text-white tracking-widest font-semibold cursor-pointer shadow-xl hover:scale-95 hover:shadow-sm transition ease-out duration-100"
         >
           aqui
-        </span>
+        </button>
         para voltares ao presente
       </p>
     </Transition>
