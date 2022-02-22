@@ -4,14 +4,14 @@ import { timeSince } from "../../utils/timeSince";
 export default function PostHeader({ post, user }) {
   return (
     <>
-      <div className="mx-4 my-6">
-        <div className="flex items-center pb-4">
+      <div id="Header" className="mx-4 my-6">
+        <div id="Subheader" className="flex items-center pb-4">
           <img
             className="w-10 h-10 rounded-full mr-4"
             src={user.avatar}
             alt={post.name}
           />
-          <div className="text-sm">
+          <div id="Name" className="text-sm">
             <p className="text-normal font-medium tracking-wide leading-none">
               {user.name}
             </p>
