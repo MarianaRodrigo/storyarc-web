@@ -4,7 +4,7 @@ import { timeSince } from "../../utils/timeSince";
 export default function PostHeader({ post, user }) {
   return (
     <>
-      <div className="mx-4 my-6 flex-1">
+      <div className="mx-4 my-6">
         <div className="flex items-center pb-4">
           <img
             className="w-10 h-10 rounded-full mr-4"

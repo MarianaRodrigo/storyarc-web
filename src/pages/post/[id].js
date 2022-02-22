@@ -1,8 +1,9 @@
 import { useRouter } from "next/router";
 import PostHeader from "../../components/PostHeader";
 import PostActions from "../../components/PostActions";
-import PostComments from "../../components/PostComments";
+import CommentCell from "../../components/CommentCell";
 import db from "../../../db.json";
+import CommentsContainer from "../../components/CommentsContainer";
 
 export default function Post() {
   const router = useRouter();
@@ -15,7 +16,9 @@ export default function Post() {
     <>
       <PostHeader post={selectedPost} user={user} />
       <PostActions />
-      <PostComments />
+      <CommentsContainer>
+        <CommentCell />
+      </CommentsContainer>
     </>
   );
 }
