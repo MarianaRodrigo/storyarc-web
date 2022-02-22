@@ -10,7 +10,6 @@ export default function LocationPost() {
   const matchedPosts = db.posts.filter((post) => {
     return post.streetName === router.query.rua;
   });
-  // console.log(matchedPosts);
 
   return (
     <>
