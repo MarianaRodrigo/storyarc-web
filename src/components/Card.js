@@ -10,6 +10,9 @@ export default function Card({ post }) {
     <Link
       href={{
         pathname: `/post/${post.id}`,
+        query: {
+          id: post.id,
+        },
       }}
       as={`/post/${post.id}`}
       passHref
