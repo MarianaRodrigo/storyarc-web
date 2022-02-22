@@ -252,10 +252,33 @@
     {
       "id": 1,
       "postId": 1,
-      "userId": "BfR5zqo7BvdN37QyAMUX97v8xow2",
+      "userId": 1,
       "body": "Amazing"
     },
-    { "id": 2, "postId": 2, "userId": 2, "body": "Sweet" }
+    { 
+      "id": 2, 
+      "postId": 2, 
+      "userId": 2, 
+      "body": "Sweet" 
+    },
+    { 
+      "id": 3, 
+      "postId": 3,
+      "userId": 3, 
+      "body": "Cool"
+    },
+    { 
+      "id": 4, 
+      "postId": 4, 
+      "userId": 4, 
+      "body": "Awesome"
+    },
+    { 
+      "id": 5, 
+      "postId": 5, 
+      "userId": 5, 
+      "body": "Nice"
+    }
   ],
   "savedPosts": [
     {
