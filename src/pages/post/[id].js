@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import PostHeader from "../../components/PostHeader";
+import PostActions from "../../components/PostActions";
+import PostComments from "../../components/PostComments";
 import db from "../../../db.json";
 
 export default function Post() {
@@ -12,6 +14,8 @@ export default function Post() {
   return (
     <>
       <PostHeader post={selectedPost} user={user} />
+      <PostActions />
+      <PostComments />
     </>
   );
 }

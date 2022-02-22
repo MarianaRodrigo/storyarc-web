@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { timeSince } from "../../utils/timeSince";
-import PostActions from "./PostActions"
 
 export default function PostHeader({ post, user }) {
   return (
@@ -26,7 +25,6 @@ export default function PostHeader({ post, user }) {
         </div>
         <p className="font-normal text-sm pb-2">{post.streetName}</p>
         <img src={post.photo} alt={post.altimg} />
-        <PostActions />
       </div>
     </>
   );
