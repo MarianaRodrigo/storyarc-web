@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
+import { Transition } from "@headlessui/react";
 import PostHeader from "../../components/PostHeader";
 import PostActions from "../../components/PostActions";
+import CommentsContainer from "../../components/CommentsContainer";
 import CommentCell from "../../components/CommentCell";
 import db from "../../../db.json";
-import CommentsContainer from "../../components/CommentsContainer";
 
 export default function Post() {
   const router = useRouter();
@@ -13,12 +14,22 @@ export default function Post() {
   const user = db.users.find((user) => user.id === selectedPost.userId);
 
   return (
-    <>
+    <Transition
+      appear={true}
+      show={true}
+      enter="transition ease duration-700 transform"
+      enterFrom="opacity-0 translate-y-full"
+      enterTo="opacity-100 translate-y-0"
+      leave="transition ease duration-1000 transform"
+      leaveFrom="opacity-100 translate-y-0"
+      leaveTo="opacity-0 translate-y-full"
+      className="flex-1"
+    >
       <PostHeader post={selectedPost} user={user} />
       <PostActions />
       <CommentsContainer>
         <CommentCell />
       </CommentsContainer>
-    </>
+    </Transition>
   );
 }
