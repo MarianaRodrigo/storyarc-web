@@ -30,6 +30,7 @@ export default function Post() {
     >
       <PostHeader post={selectedPost} user={user} />
       <PostActions />
+      <InsertComment />
       <CommentsContainer>
         {content.map((comments) => ( 
         <CommentCell key={comments.id} comments={comments}/>
