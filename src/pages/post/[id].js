@@ -36,6 +36,7 @@ export default function Post() {
         <CommentCell key={comments.id} comments={comments}/>
         ))}
       </CommentsContainer>
+      <InsertComment />
     </Transition>
   );
 }
