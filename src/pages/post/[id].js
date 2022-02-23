@@ -14,6 +14,8 @@ export default function Post() {
   });
   const user = db.users.find((user) => user.id === selectedPost.userId);
 
+  const content = db.comments;
+
   return (
     <Transition
       appear={true}
@@ -29,8 +31,9 @@ export default function Post() {
       <PostHeader post={selectedPost} user={user} />
       <PostActions />
       <CommentsContainer>
-        <InsertComment />
-        <CommentCell />
+        {content.map((comments) => ( 
+        <CommentCell key={comments.id} comments={comments}/>
+        ))}
       </CommentsContainer>
     </Transition>
   );
