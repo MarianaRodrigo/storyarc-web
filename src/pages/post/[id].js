@@ -4,6 +4,7 @@ import PostHeader from "../../components/PostHeader";
 import PostActions from "../../components/PostActions";
 import CommentsContainer from "../../components/CommentsContainer";
 import CommentCell from "../../components/CommentCell";
+import InsertComment from "../../components/InsertComment";
 import db from "../../../db.json";
 
 export default function Post() {
@@ -28,6 +29,7 @@ export default function Post() {
       <PostHeader post={selectedPost} user={user} />
       <PostActions />
       <CommentsContainer>
+        <InsertComment />
         <CommentCell />
       </CommentsContainer>
     </Transition>
