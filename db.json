@@ -255,28 +255,28 @@
       "userId": 1,
       "body": "Amazing"
     },
-    { 
-      "id": 2, 
-      "postId": 2, 
-      "userId": 2, 
-      "body": "Sweet" 
+    {
+      "id": 2,
+      "postId": 2,
+      "userId": 2,
+      "body": "Sweet"
     },
-    { 
-      "id": 3, 
+    {
+      "id": 3,
       "postId": 3,
-      "userId": 3, 
+      "userId": 3,
       "body": "Cool"
     },
-    { 
-      "id": 4, 
-      "postId": 4, 
-      "userId": 4, 
+    {
+      "id": 4,
+      "postId": 4,
+      "userId": 4,
       "body": "Awesome"
     },
-    { 
-      "id": 5, 
-      "postId": 5, 
-      "userId": 5, 
+    {
+      "id": 5,
+      "postId": 5,
+      "userId": 5,
       "body": "Nice"
     }
   ],
@@ -387,7 +387,7 @@
       "id": 5,
       "name": "Ponte dos Carcavelos",
       "data": "17-9-2005",
-      "address":"Praceta Ria de Aveiro, 3800-257 Aveiro",
+      "address": "Praceta Ria de Aveiro, 3800-257 Aveiro",
       "coordinates": [40.6453974473121, -8.654480643946753]
     },
     {
@@ -397,6 +397,5 @@
       "address": "Paço das Escolas,3004-531 Coimbra",
       "coordinates": [40.207422, -8.4260033]
     }
-
   ]
 }

@@ -15,7 +15,7 @@ export default function Container({ children }) {
       <div className="hidden sm:inline-flex flex-auto">
         <MapBoxMap />
       </div>
-      <div className="w-full h-screen sm:w-[460px] transition-all font-body flex flex-col">
+      <div className="w-full h-full sm:w-[460px] transition-all font-body flex flex-col">
         {children}
       </div>
     </div>

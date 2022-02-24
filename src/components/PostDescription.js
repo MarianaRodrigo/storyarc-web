@@ -1,6 +1,6 @@
 import { Transition } from "@headlessui/react";
 
-export function CommentsContainer({ children }) {
+export function PostDescription({ post }) {
   return (
     <Transition
       appear={true}
@@ -11,10 +11,9 @@ export function CommentsContainer({ children }) {
       leave="transition ease duration-1000 transform"
       leaveFrom="opacity-100 translate-x-0"
       leaveTo="opacity-0 translate-x-full"
-      className="flex-1 w-full h-full pb-6 overflow-y-scroll overscroll-y-contain scroll-smooth"
+      className="flex pb-4 mx-4"
     >
-      <h1 className="mx-4 pt-2">Comentários</h1>
-      {children}
+      <p className="font-normal text-sm">{post.title}</p>
     </Transition>
   );
 }

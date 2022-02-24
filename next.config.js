@@ -4,4 +4,7 @@ module.exports = {
     mapbox_key:
       "pk.eyJ1IjoiamFyYmFzNzciLCJhIjoiY2t6bGp2MjY5MmdtdDJub2NmYXR6ZWE3ZiJ9.7tPF-rPpXiE99xWJUVKBbg",
   },
+  images: {
+    domains: ["randomuser.me", "pbs.twimg.com", "i.pinimg.com"],
+  },
 };
