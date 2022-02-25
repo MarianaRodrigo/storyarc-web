@@ -22,7 +22,7 @@ export function SubHeader() {
           Conteúdos Recentes
         </h1>
       </div>
-      <Link href="./InsertContent.js" passHref>
+      <Link href="./InsertContent" passHref>
         <a>
           <FontAwesomeIcon
             className="w-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
