@@ -1,17 +1,28 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useClickOutside } from "@mantine/hooks";
 import SearchLoading from "./SearchLoading";
 import SearchResultCell from "./SearchResultCell";
 import SearchResultsContainer from "./SearchResultsContainer";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  isSearchingState,
+  setIsSearching,
+} from "../features/search/searchSlice";
 import db from "../../db.json";
 
 export default function Search() {
+  const dispatch = useDispatch();
   const searchRef = useRef("");
   const [searchResults, setSearchResults] = useState([]);
-  const [isSearching, setIsSearching] = useState(false);
+  const isSearching = useSelector(isSearchingState);
+
+  useEffect(() => {
+    searchRef.current.value = "";
+    setSearchResults([]);
+  }, [isSearching]);
 
   const clickedOutside = useClickOutside(
-    () => setIsSearching(false),
+    () => dispatch(setIsSearching(false)),
     ["mouseup", "touchend"]
   );
 
@@ -33,7 +44,7 @@ export default function Search() {
       ref={clickedOutside}
       className={
         "flex-grow h-14 shadow-md border-[0.5px] transition-all duration-50 ease-in " +
-        (isSearching ? "rounded-t-lg" : "ml-2 rounded-lg")
+        (isSearching ? "rounded-t-lg" : "sm:ml-2 rounded-lg")
       }
     >
       <div
@@ -48,7 +59,7 @@ export default function Search() {
           onChange={handleTyping}
           placeholder="Pesquisar por locais"
           className="w-full h-full rounded-lg px-4 text-sm font-light tracking-wider outline-none"
-          onFocus={() => setIsSearching(true)}
+          onFocus={() => dispatch(setIsSearching(true))}
         />
       </div>
       {isSearching && (
