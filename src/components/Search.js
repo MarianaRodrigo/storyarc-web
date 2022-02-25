@@ -1,41 +1,64 @@
-import { useState } from "react";
-// import GooglePlacesAutocomplete from "react-google-places-autocomplete";
+import { useState, useRef } from "react";
+import { useClickOutside } from "@mantine/hooks";
+import SearchLoading from "./SearchLoading";
+import SearchResultCell from "./SearchResultCell";
+import SearchResultsContainer from "./SearchResultsContainer";
+import db from "../../db.json";
 
 export default function Search() {
-  const [value, setValue] = useState("");
-  console.log(value);
+  const searchRef = useRef("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
+
+  const clickedOutside = useClickOutside(
+    () => setIsSearching(false),
+    ["mouseup", "touchend"]
+  );
+
+  function handleTyping() {
+    if (searchRef.current.value.length > 0) {
+      setSearchResults(
+        db.locations.filter((location) => {
+          const regex = new RegExp(`^${searchRef.current.value}`, "gi");
+          return location.name.match(regex);
+        })
+      );
+    } else {
+      setSearchResults([]);
+    }
+  }
+
   return (
-    <div className="flex-grow h-14 border-[0.5px] rounded-lg shadow-md transition-transform">
-      <div className="w-full h-full bg-white rounded-lg">
+    <div
+      ref={clickedOutside}
+      className={
+        "flex-grow h-14 shadow-md border-[0.5px] transition-all duration-50 ease-in " +
+        (isSearching ? "rounded-t-lg" : "ml-2 rounded-lg")
+      }
+    >
+      <div
+        className={
+          "w-full h-full bg-white transition-all duration-50 ease-in " +
+          (isSearching ? "rounded-t-lg" : "rounded-lg")
+        }
+      >
         <input
-          value={value}
-          onChange={(e) => setValue(e.target.value)}
+          ref={searchRef}
           type="text"
+          onChange={handleTyping}
           placeholder="Pesquisar por locais"
           className="w-full h-full rounded-lg px-4 text-sm font-light tracking-wider outline-none"
+          onFocus={() => setIsSearching(true)}
         />
       </div>
+      {isSearching && (
+        <SearchResultsContainer>
+          {searchResults.length === 0 && <SearchLoading />}
+          {searchResults.map((item) => (
+            <SearchResultCell key={item.id} name={item.name} />
+          ))}
+        </SearchResultsContainer>
+      )}
     </div>
-    // <div className="text-sm border rounded border-gray-200 mt-6 ml-3 p-2 pl-2 sm:w-80 md:w-60">
-    //   <GooglePlacesAutocomplete
-    //     selectProps={{
-    //       value,
-    //       onChange: setValue,
-    //     }}
-    //     apiKey="AIzaSyBMY8_V3zDNFubRe3vjsiiduWIhLk4oUrg"
-    //     apiOptions={{ language: "pt", region: "pt" }}
-    //     debounce={400}
-    //     autocompletionRequest={{
-    //       bounds: [
-    //         { lat: 50, lng: 50 },
-    //         { lat: 100, lng: 100 },
-    //       ],
-    //       componentRestrictions: {
-    //         country: ["pt"],
-    //       },
-    //     }}
-    //     minLengthAutocomplete={3}
-    //   />
-    // </div>
   );
 }
