@@ -2,6 +2,8 @@ import { Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link"; 
+
 
 function SubHeader() {
   return (
@@ -22,11 +24,15 @@ function SubHeader() {
           Conteúdos Recentes
         </h1>
       </div>
-      <FontAwesomeIcon
-        className="w-8"
-        style={{ color: "#37b780" }}
-        icon={faCirclePlus}
-      />
+      <Link href="../InsertContent.js"  passHref>
+        <a>
+          <FontAwesomeIcon href="../InsertContent.js"  passHref
+            className="w-8"
+            style={{ color: "#37b780" }}
+            icon={faCirclePlus}
+          />
+        </a>
+      </Link>
     </Transition>
   );
 }
