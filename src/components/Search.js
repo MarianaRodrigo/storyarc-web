@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { useClickOutside } from "@mantine/hooks";
+import { useClickOutside, useHotkeys } from "@mantine/hooks";
 import SearchLoading from "./SearchLoading";
 import SearchResultCell from "./SearchResultCell";
 import SearchResultsContainer from "./SearchResultsContainer";
@@ -19,12 +19,24 @@ export default function Search() {
   useEffect(() => {
     searchRef.current.value = "";
     setSearchResults([]);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+    };
   }, [isSearching]);
+
+  function onKeyDown(e) {
+    if (e.key === "Escape") {
+      dispatch(setIsSearching(false));
+      searchRef.current.blur();
+    }
+  }
 
   const clickedOutside = useClickOutside(
     () => dispatch(setIsSearching(false)),
     ["mouseup", "touchend"]
   );
+  useHotkeys([["ESC", () => dispatch(setIsSearching(false))]]);
 
   function handleTyping() {
     if (searchRef.current.value.length > 0) {
