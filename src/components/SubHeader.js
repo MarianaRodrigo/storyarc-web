@@ -22,11 +22,15 @@ export function SubHeader() {
           Conteúdos Recentes
         </h1>
       </div>
-      <FontAwesomeIcon
-        className="w-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
-        style={{ color: "#37b780" }}
-        icon={faCirclePlus}
-      />
+      <Link href="./InsertContent.js" passHref>
+        <a>
+          <FontAwesomeIcon
+            className="w-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
+            style={{ color: "#37b780" }}
+            icon={faCirclePlus}
+          />
+        </a>
+      </Link>
     </Transition>
   );
 }
