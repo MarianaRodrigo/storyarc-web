@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
-function SubHeader() {
+export function SubHeader() {
   return (
     <Transition
       appear={true}
@@ -17,18 +17,15 @@ function SubHeader() {
       className="flex mx-4 justify-between items-center my-6"
     >
       <div className="flex flex-grow items-center">
-        {/* <FontAwesomeIcon className="w-6 h-7" icon={faLocationDot} /> */}
         <h1 className=" text-xl font-normal tracking-wide">
           Conteúdos Recentes
         </h1>
       </div>
       <FontAwesomeIcon
-        className="w-8"
+        className="w-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
         style={{ color: "#37b780" }}
         icon={faCirclePlus}
       />
     </Transition>
   );
 }
-
-export default SubHeader;

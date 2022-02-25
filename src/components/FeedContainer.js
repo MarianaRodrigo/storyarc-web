@@ -1,5 +1,6 @@
 import { Transition } from "@headlessui/react";
-export default function FeedContainer({ children }) {
+
+export function FeedContainer({ children }) {
   return (
     <Transition
       appear={true}

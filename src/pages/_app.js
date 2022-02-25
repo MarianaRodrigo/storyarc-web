@@ -1,17 +1,15 @@
 import "../styles/globals.css";
 import "mapbox-gl/dist/mapbox-gl.css";
-import Container from "../components/Container";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { AppContainer, Header, Footer } from "../components";
 
-function MyApp({ Component, pageProps }) {
+function StoryArc({ Component, pageProps }) {
   return (
-    <Container>
+    <AppContainer>
       <Header />
       <Component {...pageProps} />
       <Footer />
-    </Container>
+    </AppContainer>
   );
 }
 
-export default MyApp;
+export default StoryArc;

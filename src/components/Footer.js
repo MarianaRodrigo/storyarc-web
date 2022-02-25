@@ -3,7 +3,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
-function Footer() {
+export function Footer() {
   return (
     <Transition
       appear={true}
@@ -44,5 +44,3 @@ function Footer() {
     </Transition>
   );
 }
-
-export default Footer;

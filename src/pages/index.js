@@ -1,7 +1,5 @@
-import SubHeader from "../components/SubHeader";
-import Card from "../components/Card";
+import { SubHeader, Card, FeedContainer } from "../components";
 import db from "../../db.json";
-import FeedContainer from "../components/FeedContainer";
 
 const content = db.posts;
 
