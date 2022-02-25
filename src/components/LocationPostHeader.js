@@ -2,7 +2,7 @@ import { Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
-function LocationPostHeader({ location }) {
+export function LocationPostHeader({ location }) {
   return (
     <Transition
       appear={true}
@@ -25,5 +25,3 @@ function LocationPostHeader({ location }) {
     </Transition>
   );
 }
-
-export default LocationPostHeader;

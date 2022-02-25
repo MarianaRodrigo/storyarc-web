@@ -1,8 +1,6 @@
 import { useRouter } from "next/router";
+import { Card, FeedContainer, LocationPostHeader } from "../../components";
 import db from "../../../db.json";
-import Card from "../../components/Card";
-import FeedContainer from "../../components/FeedContainer";
-import LocationPostHeader from "../../components/LocationPostHeader";
 
 export default function LocationPost() {
   const router = useRouter();
