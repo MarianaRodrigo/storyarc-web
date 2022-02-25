@@ -3,7 +3,7 @@ import db from "../../db.json";
 import { timeSince } from "../../utils/timeSince"; //para calcular há quanto tempo foi publicado o post
 import Link from "next/link";
 
-export default function Card({ post }) {
+export function Card({ post }) {
   const user = db.users.find((user) => user.id === post.userId); // pesquisa quem é o dono do post
 
   return (
