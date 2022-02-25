@@ -2,6 +2,7 @@ import { Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export function SubHeader() {
   return (

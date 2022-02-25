@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <>
       <SubHeader />
+      
       <FeedContainer>
         {content.map((post) => (
           <Card key={post.id} post={post} />

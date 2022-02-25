@@ -14,3 +14,4 @@ export { Card } from "./Card";
 export { AppContainer } from "./AppContainer";
 export { Header } from "./Header";
 export { Footer } from "./Footer";
+export { InsertContent } from "./InsertContent";
