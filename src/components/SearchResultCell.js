@@ -10,12 +10,15 @@ export default function SearchResultCell({ name, ref }) {
   function handleClick(e) {
     e.preventDefault();
     dispatch(setIsSearching(false));
-    router.push({
-      pathname: `/search/${name}`,
-      query: {
-        rua: name,
+    router.push(
+      {
+        pathname: `/search/${name}`,
+        query: {
+          rua: name,
+        },
       },
-    });
+      `/search/${name}`
+    );
   }
 
   return (
