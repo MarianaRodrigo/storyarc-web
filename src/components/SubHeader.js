@@ -3,8 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import InsertContent from "./InsertContent.js";
+import React from "react";
 
 export function SubHeader() {
+  const [show, setShow] = React.useState(false);
+  
   return (
     <Transition
       appear={true}
@@ -22,15 +26,18 @@ export function SubHeader() {
           Conteúdos Recentes
         </h1>
       </div>
-      <Link href="./InsertContent" passHref>
-        <a>
+      {/* <Link href="./InsertContent" passHref> */}
+        {/* <a> */}
           <FontAwesomeIcon
             className="w-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
+            data-modal-toggle="defaultModal"
             style={{ color: "#37b780" }}
             icon={faCirclePlus}
+            onClick={() => setShow(!show)}
           />
-        </a>
-      </Link>
+        {/* </a> */}
+      {/* </Link> */}
+      <InsertContent show />
     </Transition>
   );
 }
