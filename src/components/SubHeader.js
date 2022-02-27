@@ -3,11 +3,11 @@ import Link from "next/link";
 import { Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import InsertContent from "./InsertContent"
+import InsertContent from "./InsertContent";
 
 export function SubHeader() {
   const [show, setShow] = useState(false);
-  
+
   return (
     <Transition
       appear={true}
@@ -26,17 +26,17 @@ export function SubHeader() {
         </h1>
       </div>
       {/* <Link href="./InsertContent" passHref> */}
-        {/* <a> */}
-          <FontAwesomeIcon
-            className="w-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
-            data-modal-toggle="defaultModal"
-            style={{ color: "#37b780" }}
-            icon={faCirclePlus}
-            onClick={() => setShow(!show)}
-          />
-        {/* </a> */}
+      {/* <a> */}
+      <FontAwesomeIcon
+        className="w-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
+        data-modal-toggle="defaultModal"
+        style={{ color: "#37b780" }}
+        icon={faCirclePlus}
+        onClick={() => setShow(!show)}
+      />
+      {/* </a> */}
       {/* </Link> */}
-      <InsertContent show />
+      <InsertContent />
     </Transition>
   );
 }

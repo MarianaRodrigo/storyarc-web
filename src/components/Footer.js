@@ -1,23 +1,36 @@
-import { auth, googleProvider } from "../firebase/firebase";
+import { useEffect } from "react";
 import { Transition } from "@headlessui/react";
-import Link from "next/link";
-// import { faUser } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import { useClickOutside } from "@mantine/hooks";
+import { useSelector, useDispatch } from "react-redux";
+import { useUser } from "../features/user/userSlice";
+import { useBarState, setBarState } from "../features/bar/barSlice";
+import { SignedInBar, SignedOutBar, LogIn } from "./";
 
 export function Footer() {
-  function logIn() {
-    auth
-      .signInWithPopup(googleProvider)
-      .catch((error) => alert("Error signing in: " + error.message));
+  const dispatch = useDispatch();
+  const user = useSelector(useUser);
+  const isExpanded = useSelector(useBarState);
+
+  function onKeyDown(e) {
+    if (e.key === "Escape") {
+      dispatch(setBarState(false));
+    }
   }
 
-  function logOut() {
-    auth.signOut();
-  }
+  const ref = useClickOutside(
+    () => dispatch(setBarState(false)),
+    ["mouseup", "touchend"]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, []);
 
   return (
-    <Link href="/profile" passHref>
+    <div ref={ref}>
       <Transition
         appear={true}
         show={true}
@@ -27,12 +40,16 @@ export function Footer() {
         leave="transition ease duration-1000 transform"
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-full"
-        className="flex px-4 h-16 items-center justify-between shadow-inner w-full bg-[#37b780] text-white"
+        className={
+          "flex px-4 items-center justify-between w-full rounded-t-md duration-[250ms] ease-in-out transition-all " +
+          (isExpanded
+            ? "h-96 bg-white border-t-2 drop-shadow-md"
+            : "h-16 bg-[#37b780] text-white ")
+        }
       >
-        <button onClick={logIn}>logIn</button>
-        <button onClick={logOut}>logOut</button>
+        {user ? <SignedInBar /> : isExpanded ? <LogIn /> : <SignedOutBar />}
       </Transition>
-    </Link>
+    </div>
   );
 }
 

@@ -7,6 +7,7 @@ import MapBoxMap from "./MapBoxMap";
 //redux
 import { useDispatch } from "react-redux";
 import { setUser } from "../features/user/userSlice";
+import { setBarState } from "../features/bar/barSlice";
 //firebase
 import { auth } from "../firebase/firebase";
 
@@ -16,17 +17,28 @@ export function AppContainer({ children }) {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
-        dispatch(
-          setUser({
-            uid: user.uid,
-            avatar: user.photoURL,
-            name: user.displayName,
-            email: user.email,
-          })
-        );
+        if (!user.photoURL) {
+          dispatch(
+            setUser({
+              uid: user.uid,
+              name: user.displayName,
+              email: user.email,
+            })
+          );
+        } else {
+          dispatch(
+            setUser({
+              uid: user.uid,
+              avatar: user.photoURL,
+              name: user.displayName,
+              email: user.email,
+            })
+          );
+        }
       } else {
         dispatch(setUser(user));
       }
+      dispatch(setBarState(false));
     });
   }, []);
 
