@@ -17,3 +17,6 @@ export { Footer } from "./Footer";
 export { InsertContent } from "./InsertContent";
 //SEARCH
 export { LocationPostHeader } from "./LocationPostHeader";
+//PROFILE
+export { ProfileHeader } from "./ProfileHeader";
+export { ProfileDescription } from "./ProfileDescription";

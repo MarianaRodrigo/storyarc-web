@@ -1,13 +1,12 @@
+import { useState } from "react";
+import Link from "next/link";
 import { Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
-import InsertContent from "./InsertContent.js";
-import React from "react";
+import InsertContent from "./InsertContent"
 
 export function SubHeader() {
-  const [show, setShow] = React.useState(false);
+  const [show, setShow] = useState(false);
   
   return (
     <Transition

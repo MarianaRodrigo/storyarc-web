@@ -1,7 +1,35 @@
+//packages
+import { useEffect } from "react";
+//next imports
 import Head from "next/head";
+//components
 import MapBoxMap from "./MapBoxMap";
+//redux
+import { useDispatch } from "react-redux";
+import { setUser } from "../features/user/userSlice";
+//firebase
+import { auth } from "../firebase/firebase";
 
 export function AppContainer({ children }) {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        dispatch(
+          setUser({
+            uid: user.uid,
+            avatar: user.photoURL,
+            name: user.displayName,
+            email: user.email,
+          })
+        );
+      } else {
+        dispatch(setUser(user));
+      }
+    });
+  }, []);
+
   return (
     <div className="flex w-screen h-screen antialiased">
       <Head>

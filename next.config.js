@@ -1,8 +1,13 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    mapbox_key:
-      "pk.eyJ1IjoiamFyYmFzNzciLCJhIjoiY2t6bGp2MjY5MmdtdDJub2NmYXR6ZWE3ZiJ9.7tPF-rPpXiE99xWJUVKBbg",
+    MAPBOX_KEY: process.env.MAPBOX_KEY,
+    FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
+    FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN,
+    FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID,
+    FIREBASE_STORAGE_BUCKET: process.env.FIREBASE_STORAGE_BUCKET,
+    FIREBASE_MESSAGING_SENDER_ID: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    FIREBASE_APP_ID: process.env.FIREBASE_APP_ID,
   },
   images: {
     domains: [
@@ -16,6 +21,7 @@ module.exports = {
       "reencontrosdemusicacontemporanea.pt",
       "www.zarllor.com",
       "www.teatroaveirense.pt",
+      "lh3.googleusercontent.com",
     ],
   },
 };

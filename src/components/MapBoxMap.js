@@ -8,7 +8,7 @@ export default function MapBoxMap() {
 
   return (
     <Map
-      mapboxAccessToken={process.env.mapbox_key}
+      mapboxAccessToken={process.env.MAPBOX_KEY}
       initialViewState={{
         longitude: -8.65362,
         latitude: 40.6412,
