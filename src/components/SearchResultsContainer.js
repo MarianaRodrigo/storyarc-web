@@ -13,9 +13,9 @@ export default function SearchResultsContainer({ children }) {
       leaveTo="opacity-0 translate-y-full"
       className="relative shadow-md z-50"
     >
-      <div className="absolute w-full bg-white rounded-b-lg max-h-80 overflow-auto shadow-md">
+      <ul className="absolute w-full bg-white rounded-b-lg max-h-80 overflow-auto shadow-md">
         {children}
-      </div>
+      </ul>
     </Transition>
   );
 }

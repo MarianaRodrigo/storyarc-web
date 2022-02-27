@@ -1,6 +1,7 @@
-import { useState } from "react";
+//next imports
 import Image from "next/image";
 import Link from "next/link";
+//redux
 import { useSelector } from "react-redux";
 import { isSearchingState } from "../features/search/searchSlice";
 

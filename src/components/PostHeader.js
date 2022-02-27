@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
-import { timeSince } from "../../utils/timeSince";
+import { timeSince } from "../utils/timeSince";
 
 export function PostHeader({ post, user }) {
   return (

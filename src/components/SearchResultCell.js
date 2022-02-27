@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { setIsSearching } from "../features/search/searchSlice";
@@ -22,11 +21,11 @@ export default function SearchResultCell({ name, ref }) {
   }
 
   return (
-    <p
+    <li
       onClick={(e) => handleClick(e)}
       className="cursor-pointer px-3 py-2 hover:bg-gray-100 border-t-[0.5px] border-opacity-60"
     >
       {name}
-    </p>
+    </li>
   );
 }

@@ -4,7 +4,6 @@ import db from "../../../db.json";
 
 export default function LocationPost() {
   const router = useRouter();
-  console.log(router);
   const matchedPosts = db.posts.filter((post) => {
     return post.streetName === router.query.rua;
   });

@@ -1,15 +1,36 @@
+//packages imports
 import { useRef } from "react";
-import Image from "next/image";
+import { nanoid } from "nanoid";
 import { Transition } from "@headlessui/react";
 import { FiSend } from "react-icons/fi";
+//next imports
+import Image from "next/image";
+//redux
+import { useSelector } from "react-redux";
+import { useUser } from "../features/user/userSlice";
+//temp db
 import db from "../../db.json";
 
-export function InsertComment() {
-  const currentUser = db.users[1];
+export function InsertComment(postId) {
+  const currentUser = useSelector(useUser);
   const commentInput = useRef(null);
 
-  function handleSubmit() {
-    //todo
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (commentInput.current.value.lenght === 0) {
+      alert(
+        "É necessarios preencherem o campo de comentário para poderes submeter"
+      );
+    } else {
+      const comment = {
+        id: nanoid(),
+        postId: postId,
+        userId: currentUser.uid,
+        body: commentInput.current.value,
+      };
+      db.comments.push(comment);
+      commentInput.current.value = "";
+    }
   }
 
   return (

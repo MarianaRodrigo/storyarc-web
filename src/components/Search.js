@@ -1,13 +1,17 @@
+//packages imports
 import { useState, useRef, useEffect } from "react";
-import { useClickOutside, useHotkeys } from "@mantine/hooks";
+import { useClickOutside } from "@mantine/hooks";
+//components
 import SearchLoading from "./SearchLoading";
 import SearchResultCell from "./SearchResultCell";
 import SearchResultsContainer from "./SearchResultsContainer";
+//redux
 import { useSelector, useDispatch } from "react-redux";
 import {
   isSearchingState,
   setIsSearching,
 } from "../features/search/searchSlice";
+//db
 import db from "../../db.json";
 
 export default function Search() {
@@ -36,7 +40,6 @@ export default function Search() {
     () => dispatch(setIsSearching(false)),
     ["mouseup", "touchend"]
   );
-  useHotkeys([["ESC", () => dispatch(setIsSearching(false))]]);
 
   function handleTyping() {
     if (searchRef.current.value.length > 0) {

@@ -1,5 +1,8 @@
 // next imports
 import { useRouter } from "next/router";
+//redux
+import { useSelector } from "react-redux";
+import { useUser } from "../../features/user/userSlice";
 // components
 import {
   PostHeader,
@@ -16,6 +19,7 @@ import db from "../../../db.json";
 export default function Post() {
   const router = useRouter();
   const { id } = router.query;
+  const currentUser = useSelector(useUser);
   const selectedPost = db.posts.find((post) => {
     return post.id == id;
   });
@@ -28,7 +32,7 @@ export default function Post() {
       <PostDescription post={selectedPost} />
       <PostContent post={selectedPost} />
       <PostActions />
-      <InsertComment />
+      {currentUser && <InsertComment postId={selectedPost.id} />}
       <CommentsContainer>
         {postComments.map((post) => (
           <CommentCell key={post.id} comment={post} />
