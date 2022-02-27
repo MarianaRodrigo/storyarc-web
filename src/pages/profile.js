@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { useUser } from "../features/user/userSlice";
 //components
-import { ProfileHeader, ProfileDescription, FeedContainer, Card } from "../components";
+import { ProfileHeader, ProfileDescription, ProfileContent , FeedContainer, Card } from "../components";
 
 export default function Profile() {
   const currentUser = useSelector(useUser);
@@ -32,6 +32,7 @@ export default function Profile() {
         <>
           <ProfileHeader user={currentUser} />
           <ProfileDescription user={currentUser} />
+          <ProfileContent />
           {/* {post && <FeedContainer>
             {post.posts.map(post => <Card key={post.id} post={post} />)}
           </FeedContainer>} */}

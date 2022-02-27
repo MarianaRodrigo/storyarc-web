@@ -23,3 +23,4 @@ export { ProfileDescription } from "./ProfileDescription";
 export { SignedInBar } from "./SignedInBar";
 export { SignedOutBar } from "./SignedOutBar";
 export { LogIn } from "./LogIn";
+export { ProfileContent } from "./ProfileContent";
