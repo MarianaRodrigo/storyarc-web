@@ -1,4 +1,4 @@
-export default function ProfileDescription({ user }) {
+export function ProfileDescription({ user }) {
   return (
     <div className="mx-6 mt-2">
       <h1 className="font-medium tracking-wide text-xl">{user.name}</h1>

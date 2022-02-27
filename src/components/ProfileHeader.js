@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ProfileHeader({ user }) {
+export function ProfileHeader({ user }) {
   return (
     <div className="mt-6 h-64 relative">
       <Image src="/images/profile.png" alt="Moliceiro" layout="fill" />

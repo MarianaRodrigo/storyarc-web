@@ -1,9 +1,11 @@
+//imports
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import ProfileHeader from "../components/ProfileHeader";
-import ProfileDescription from "../components/ProfileDescription";
+//redux
 import { useSelector } from "react-redux";
 import { useUser } from "../features/user/userSlice";
+//components
+import { ProfileHeader, ProfileDescription } from "../components";
 
 export default function Profile() {
   const currentUser = useSelector(useUser);
@@ -15,7 +17,6 @@ export default function Profile() {
     }
   }, [currentUser]);
 
-  console.log(currentUser);
   return (
     <div className="flex-1">
       {currentUser && (
