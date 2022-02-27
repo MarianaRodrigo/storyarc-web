@@ -20,3 +20,4 @@ export { LocationPostHeader } from "./LocationPostHeader";
 //PROFILE
 export { ProfileHeader } from "./ProfileHeader";
 export { ProfileDescription } from "./ProfileDescription";
+export {ProfileContent } from "./ProfileContent"
