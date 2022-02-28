@@ -19,41 +19,47 @@ export default function CriarConta() {
       leave="transition ease duration-1000 transform"
       leaveFrom="opacity-100 translate-y-0"
       leaveTo="opacity-0 translate-y-full"
-      className="flex-1 mx-4 space-y-4 overflow-y-scroll overscroll-y-auto"
+      className="flex-1 mx-4 space-y-4 overflow-y-scroll"
     >
       <h1 className="text-2xl pt-4">Criar conta</h1>
       <div className="flex flex-col w-full space-y-1">
-        <p>Insere o teu nome</p>
+        <p className="text-sm">Insere o teu nome</p>
         <input
           type="text"
           placeholder="Nome"
-          className="w-full h-12 shadow-xl border-[0.1px] px-4 rounded-md focus:outline-none"
+          className="w-full h-12 shadow-xl border-[0.1px] px-4 rounded-md focus:outline-none text-sm"
         />
       </div>
       <div className="flex flex-col w-full space-y-1">
-        <p>Insere o teu email</p>
+        <p className="text-sm">Insere o teu email</p>
         <input
           type="text"
           placeholder="Email"
-          className="w-full h-12 shadow-xl border-[0.1px] px-4 rounded-md focus:outline-none"
+          className="w-full h-12 shadow-xl border-[0.1px] px-4 rounded-md focus:outline-none text-sm"
         />
       </div>
       <div className="flex flex-col w-full space-y-1">
-        <p>Insere uma password</p>
+        <p className="text-sm">Insere uma password</p>
         <input
           type="password"
           placeholder="Password"
-          className="w-full h-12 shadow-xl border-[0.1px] px-4 rounded-md focus:outline-none"
+          className="w-full h-12 shadow-xl border-[0.1px] px-4 rounded-md focus:outline-none text-sm"
         />
       </div>
       <div className="flex flex-col w-full space-y-1">
-        <p>Confirma a tua password</p>
+        <p className="text-sm">Confirma a tua password</p>
         <input
           type="password"
           placeholder="Confirma a password"
-          className="w-full h-12 shadow-xl border-[0.1px] px-4 rounded-md focus:outline-none"
+          className="w-full h-12 shadow-xl border-[0.1px] px-4 rounded-md focus:outline-none text-sm"
         />
       </div>
+      <button
+        // onClick={logInEmail}
+        className="px-4 py-3 bg-verde w-full rounded-lg text-white"
+      >
+        Iniciar sessão
+      </button>
       <div className="flex flex-col items-center justify-center space-y-4">
         <p>ou</p>
         <button
