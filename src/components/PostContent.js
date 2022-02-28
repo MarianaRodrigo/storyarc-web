@@ -12,7 +12,7 @@ export function PostContent({ post }) {
       leave="transition ease duration-1000 transform"
       leaveFrom="opacity-100 translate-x-0"
       leaveTo="opacity-0 translate-x-full"
-      className="w-full h-80 relative"
+      className="w-full h-80 relative flex flex-none"
     >
       <Image src={post.photo} alt={post.altimg} layout="fill" priority />
     </Transition>

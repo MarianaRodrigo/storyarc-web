@@ -11,7 +11,7 @@ export function CommentsContainer({ children }) {
       leave="transition ease duration-1000 transform"
       leaveFrom="opacity-100 translate-x-0"
       leaveTo="opacity-0 translate-x-full"
-      className="flex-1 w-full h-full pb-6 overflow-y-scroll overscroll-y-contain scroll-smooth"
+      className="w-full h-auto pb-6"
     >
       <h1 className="mx-4 pt-2">Comentários</h1>
       {children}

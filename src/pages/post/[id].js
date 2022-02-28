@@ -27,7 +27,7 @@ export default function Post() {
   const postComments = db.comments.filter((comments) => comments.postId == id);
 
   return (
-    <>
+    <div className="flex flex-col flex-1 h-full overflow-y-scroll scroll-smooth">
       <PostHeader post={selectedPost} user={user} />
       <PostDescription post={selectedPost} />
       <PostContent post={selectedPost} />
@@ -43,6 +43,6 @@ export default function Post() {
           <CommentCell key={post.id} comment={post} />
         ))}
       </CommentsContainer>
-    </>
+    </div>
   );
 }
