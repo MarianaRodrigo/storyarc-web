@@ -31,7 +31,6 @@ export default function Post() {
       <PostHeader post={selectedPost} user={user} />
       <PostDescription post={selectedPost} />
       <PostContent post={selectedPost} />
-
       {currentUser && (
         <>
           <PostActions />

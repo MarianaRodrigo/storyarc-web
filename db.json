@@ -59,7 +59,7 @@
     {
       "id": 5,
       "userId": 5,
-      "postType": "comparação",
+      "postType": "foto",
       "title": "Universidade de Aveiro",
       "description": null,
       "photo": "https://api-assets.ua.pt/v1/image/resizer?imageUrl=https://www.ua.pt/contents%2Fimgs%2Fabout%2Fhistoria_ua_1980_5.jpg&width=1200",

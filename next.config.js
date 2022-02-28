@@ -22,6 +22,7 @@ module.exports = {
       "www.zarllor.com",
       "www.teatroaveirense.pt",
       "lh3.googleusercontent.com",
+      "3.bp.blogspot.com",
     ],
   },
 };
