@@ -4,8 +4,8 @@ import 'react-tabs/style/react-tabs.css';
 export function ProfileContent () {
     return (
   <Tabs>
-    <TabList>
-      <Tab>Publicações Próprias </Tab>
+    <TabList className="flex justify-center mt-6 tracking-wide">
+      <Tab selectedClassName="border-b border-black">Publicações Próprias </Tab>
       
       <Tab>Publicações que gostei</Tab>
      
