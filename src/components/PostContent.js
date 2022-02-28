@@ -29,7 +29,10 @@ export function PostContent({ post }) {
         alt={post.altimg}
         layout="fill"
         priority
-        className="hover:opacity-0 transition-opacity duration-700 ease-out"
+        className={
+          post.new_photo &&
+          "hover:opacity-0 transition-opacity duration-700 ease-out"
+        }
       />
     </Transition>
   );
