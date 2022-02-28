@@ -7,7 +7,7 @@ export function ProfileHeader({ user }) {
       <div className="absolute w-full h-full bg-gradient-to-t from-white to-transparent" />
       <div className="absolute w-24 h-24 top-[30%] left-8">
         <Image
-          src={user.avatar}
+          src={user.avatar ? user.avatar : "/images/user_img.png"}
           alt={user.name}
           layout="fill"
           className="rounded-full"
