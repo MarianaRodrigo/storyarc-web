@@ -1,12 +1,16 @@
-import { useState } from "react";
-import Link from "next/link";
 import { Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-import InsertContent from "./InsertContent";
+import { InsertContent } from "./";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setAddContent,
+  isShowingContentModal,
+} from "../features/addContent/addSlice";
 
 export function SubHeader() {
-  const [show, setShow] = useState(false);
+  const isShowing = useSelector(isShowingContentModal);
+  const dispatch = useDispatch();
 
   return (
     <Transition
@@ -28,15 +32,15 @@ export function SubHeader() {
       {/* <Link href="./InsertContent" passHref> */}
       {/* <a> */}
       <FontAwesomeIcon
+        onClick={() => dispatch(setAddContent(true))}
         className="w-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
         data-modal-toggle="defaultModal"
         style={{ color: "#37b780" }}
         icon={faCirclePlus}
-        onClick={() => setShow(!show)}
       />
       {/* </a> */}
       {/* </Link> */}
-      <InsertContent />
+      {isShowing && <InsertContent />}
     </Transition>
   );
 }
