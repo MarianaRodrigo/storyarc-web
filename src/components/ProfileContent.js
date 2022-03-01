@@ -38,9 +38,7 @@ export function ProfileContent() {
       </TabList>
       <TabPanel className="pt-4">
         {userPostsFetching || userPostsLoading ? (
-          <>
-            <h1>loading...</h1>
-          </>
+          <></>
         ) : userPosts.length > 0 ? (
           userPosts.map((post) => <Card key={post.id} post={post} />)
         ) : (
@@ -49,9 +47,7 @@ export function ProfileContent() {
       </TabPanel>
       <TabPanel>
         {savedPostsFetching || savedPostsLoading ? (
-          <>
-            <h1>loading...</h1>
-          </>
+          <></>
         ) : savedPosts[0]?.posts.length > 0 ? (
           <div className="space-y-4">
             {savedPosts[0].posts.map((post) => (
