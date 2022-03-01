@@ -1,14 +1,22 @@
-import { SubHeader, Card, FeedContainer } from "../components";
-import db from "../../db.json";
-
-const content = db.posts;
+import { SubHeader, Card, FeedContainer, Loader } from "../components";
+import { useGetAllPostQuery } from "../services/storyarc";
 
 export default function Home() {
+  const { data, isFetching, isLoading } = useGetAllPostQuery();
+
+  if (isLoading || isFetching) {
+    return (
+      <div className="flex flex-1 items-center">
+        <Loader />
+      </div>
+    );
+  }
+
   return (
     <>
       <SubHeader />
       <FeedContainer>
-        {content.map((post) => (
+        {data.map((post) => (
           <Card key={post.id} post={post} />
         ))}
       </FeedContainer>

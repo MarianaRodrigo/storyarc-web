@@ -1,6 +1,6 @@
 import { Transition } from "@headlessui/react";
 
-export function PostDescription({ post }) {
+export function PostDescription({ desc }) {
   return (
     <Transition
       appear={true}
@@ -13,7 +13,7 @@ export function PostDescription({ post }) {
       leaveTo="opacity-0 translate-x-full"
       className="flex pb-4 mx-4"
     >
-      <p className="font-normal text-sm">{post.title}</p>
+      <p className="font-normal text-sm">{desc}</p>
     </Transition>
   );
 }

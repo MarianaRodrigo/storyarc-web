@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
 import { timeSince } from "../utils/timeSince";
+import { MdFlip } from "react-icons/md";
 
-export function PostHeader({ post, user }) {
+export function PostHeader({ date, user, postType }) {
   return (
     <Transition
       appear={true}
@@ -13,26 +14,29 @@ export function PostHeader({ post, user }) {
       leave="transition ease duration-1000 transform"
       leaveFrom="opacity-100 translate-x-0"
       leaveTo="opacity-0 translate-x-full"
-      className="flex items-center pb-2 px-4 mt-4 space-x-2"
+      className="flex items-center pb-2 px-4 mt-4 justify-between"
     >
-      <div className="relative h-10 w-10">
-        <Image
-          src={user.avatar}
-          alt={user.name}
-          layout="fill"
-          priority
-          className="rounded-full"
-        />
+      <div className="flex space-x-2">
+        <div className="relative h-10 w-10">
+          <Image
+            src={user.avatar}
+            alt={user.name}
+            layout="fill"
+            priority
+            className="rounded-full"
+          />
+        </div>
+        <div className="flex flex-col ">
+          <p className="font-medium text-sm tracking-wide">{user.name}</p>
+          <p className="text-xs font-light tracking-wide">
+            Publicado{" "}
+            {timeSince(date) === "ontem"
+              ? timeSince(date)
+              : "na " + timeSince(date)}
+          </p>
+        </div>
       </div>
-      <div className="flex flex-col ">
-        <p className="font-medium text-sm tracking-wide">{user.name}</p>
-        <p className="text-xs font-light tracking-wide">
-          Publicado{" "}
-          {timeSince(post.createdAt) === "ontem"
-            ? timeSince(post.createdAt)
-            : "há " + timeSince(post.createdAt)}
-        </p>
-      </div>
+      {postType === "comparacao" && <MdFlip className="w-6 h-6" />}
     </Transition>
   );
 }

@@ -58,7 +58,7 @@ export default function CriarConta() {
         // onClick={logInEmail}
         className="px-4 py-3 bg-verde w-full rounded-lg text-white"
       >
-        Iniciar sessão
+        Criar conta
       </button>
       <div className="flex flex-col items-center justify-center space-y-4">
         <p>ou</p>

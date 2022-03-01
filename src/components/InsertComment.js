@@ -1,5 +1,5 @@
 //packages imports
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { nanoid } from "nanoid";
 import { Transition } from "@headlessui/react";
 import { FiSend } from "react-icons/fi";
@@ -8,27 +8,33 @@ import Image from "next/image";
 //redux
 import { useSelector } from "react-redux";
 import { useUser } from "../features/user/userSlice";
-//temp db
-import db from "../../db.json";
+import { useAddCommentMutation } from "../services/storyarc";
 
-export function InsertComment(postId) {
+export function InsertComment({ postId, refetch }) {
   const currentUser = useSelector(useUser);
-  const commentInput = useRef(null);
+  const commentInput = useRef("");
+  const [addComment, addCommentResult] = useAddCommentMutation();
+
+  useEffect(() => {
+    if (addCommentResult.status === "fulfilled") {
+      refetch();
+    }
+    console.log(addCommentResult);
+  }, [addCommentResult]);
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (commentInput.current.value.lenght === 0) {
+    if (commentInput.current.value.length === 0) {
       alert(
-        "É necessarios preencherem o campo de comentário para poderes submeter"
+        "É preciso que preenchas o campo de comentário para poderes submeter"
       );
     } else {
-      const comment = {
+      addComment({
         id: nanoid(),
         postId: postId,
         userId: currentUser.uid,
         body: commentInput.current.value,
-      };
-      db.comments.push(comment);
+      });
       commentInput.current.value = "";
     }
   }
@@ -60,13 +66,13 @@ export function InsertComment(postId) {
         <input
           ref={commentInput}
           type="text"
-          placeholder="Escreve um comentário..."
+          placeholder="Adiciona um comentário..."
           on
           className="flex-grow py-3 px-4 bg-gray-200 rounded-full text-sm font-light tracking-wider outline-none"
         />
         <FiSend
           className="flex-none w-6 h-6 cursor-pointer"
-          onPress={handleSubmit}
+          onClick={handleSubmit}
         />
       </div>
     </Transition>

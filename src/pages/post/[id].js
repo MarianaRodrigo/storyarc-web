@@ -3,6 +3,10 @@ import { useRouter } from "next/router";
 //redux
 import { useSelector } from "react-redux";
 import { useUser } from "../../features/user/userSlice";
+import {
+  useGetPostWithUserAndCommentsDataQuery,
+  useGetPostCommentsQuery,
+} from "../../services/storyarc";
 // components
 import {
   PostHeader,
@@ -12,35 +16,80 @@ import {
   CommentsContainer,
   CommentCell,
   InsertComment,
+  Loader,
+  EmptyCommentsSection,
 } from "../../components";
-// db
-import db from "../../../db.json";
 
 export default function Post() {
   const router = useRouter();
   const { id } = router.query;
   const currentUser = useSelector(useUser);
-  const selectedPost = db.posts.find((post) => {
-    return post.id == id;
-  });
-  const user = db.users.find((user) => user.id === selectedPost.userId);
-  const postComments = db.comments.filter((comments) => comments.postId == id);
+  const {
+    data: post,
+    isLoading,
+    isFetching,
+    error,
+  } = useGetPostWithUserAndCommentsDataQuery({ postId: id });
+
+  const {
+    data: comments,
+    isLoading: commentsLoading,
+    isFetching: commentsFetching,
+    refetch,
+  } = useGetPostCommentsQuery({ postId: id });
+
+  if (isLoading || isFetching) {
+    return (
+      <div className="flex flex-1 items-center">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (error) {
+    router.push("/404");
+    return null;
+  }
 
   return (
     <div className="flex flex-col flex-1 h-full overflow-y-scroll scroll-smooth">
-      <PostHeader post={selectedPost} user={user} />
-      <PostDescription post={selectedPost} />
-      <PostContent post={selectedPost} />
+      <PostHeader
+        user={post.user}
+        date={post.createdAt}
+        postType={post.postType}
+      />
+      <PostDescription desc={post.title} />
+      <PostContent
+        image={post.photo}
+        newImage={post.new_photo}
+        alt={post.altimg}
+      />
       {currentUser && (
         <>
           <PostActions />
-          <InsertComment postId={selectedPost.id} />
+          <InsertComment postId={post.id} refetch={refetch} />
         </>
       )}
       <CommentsContainer>
-        {postComments.map((post) => (
-          <CommentCell key={post.id} comment={post} />
-        ))}
+        {commentsLoading || commentsFetching ? (
+          <>
+            <h1>loading...</h1>
+          </>
+        ) : comments.length > 0 ? (
+          comments.map((comment) => (
+            <CommentCell key={comment.id} comment={comment} />
+          ))
+        ) : (
+          <EmptyCommentsSection />
+        )}
+
+        {/* {comments.length > 0 ? (
+          comments.map((comment) => (
+            <CommentCell key={comment.id} comment={comment} />
+          ))
+        ) : (
+          <EmptyCommentsSection />
+        )} */}
       </CommentsContainer>
     </div>
   );

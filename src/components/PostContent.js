@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Transition } from "@headlessui/react";
 
-export function PostContent({ post }) {
+export function PostContent({ image, newImage, alt }) {
   return (
     <Transition
       appear={true}
@@ -14,24 +14,18 @@ export function PostContent({ post }) {
       leaveTo="opacity-0 translate-x-full"
       className="w-full h-80 relative flex flex-none"
     >
-      {post.new_photo && (
+      {newImage && (
         <div className="absolute w-full h-full">
-          <Image
-            src={post.new_photo}
-            alt={post.altimg}
-            layout="fill"
-            priority
-          />
+          <Image src={newImage} alt={alt} layout="fill" priority />
         </div>
       )}
       <Image
-        src={post.photo}
-        alt={post.altimg}
+        src={image}
+        alt={alt}
         layout="fill"
         priority
         className={
-          post.new_photo &&
-          "hover:opacity-0 transition-opacity duration-700 ease-out"
+          newImage && "hover:opacity-0 transition-opacity duration-700 ease-out"
         }
       />
     </Transition>

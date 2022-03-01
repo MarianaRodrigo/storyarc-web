@@ -3,13 +3,9 @@
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
 //utils
-import { timeSince } from "../utils/timeSince"; //para calcular há quanto tempo foi publicado o post
-//db
-import db from "../../db.json";
+import { timeSince } from "../utils/timeSince";
 
 export function Card({ post }) {
-  const user = db.users.find((user) => user.id === post.userId); // pesquisa quem é o dono do post
-
   return (
     <Link
       href={{
@@ -64,12 +60,12 @@ export function Card({ post }) {
           <div className="flex items-center pt-5 pl-3 space-x-2">
             <img
               className="w-10 h-10 rounded-full"
-              src={user.avatar}
+              src={post.user.avatar}
               alt={post.name}
             />
             <div className="space-y-[0.10rem]">
               <p className="text-black text-xs font-medium tracking-wide leading-none">
-                {user.name}
+                {post.user.name}
               </p>
               <p className="text-gray-400  tracking-wide text-[0.70rem]">
                 Publicado{" "}

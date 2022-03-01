@@ -1,10 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import Map, { Marker } from "react-map-gl";
-import db from "../../db.json";
+import { useGetLocationsQuery } from "../services/storyarc";
 
 export default function MapBoxMap() {
-  const locations = db.locations;
+  const { data: locations, isFetching } = useGetLocationsQuery();
+
+  if (isFetching) {
+    return null;
+  }
 
   return (
     <Map
