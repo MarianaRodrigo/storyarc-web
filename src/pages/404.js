@@ -20,7 +20,7 @@ export default function Custom404() {
       className="flex flex-col items-center space-between flex-1 py-10"
     >
       <p className="font-semibold tracking-widest text-xl text-[#37b780]">
-        Pareces estar perdido na historia
+        Pareces estar perdido na história
       </p>
       <div className="flex-1 flex h-full items-center">
         <div className="w-64 h-64 relative">
