@@ -396,6 +396,20 @@
       "data": "20-1-2022",
       "address": "Paço das Escolas,3004-531 Coimbra",
       "coordinates": [40.207422, -8.4260033]
+    },
+    {
+      "id": 7,
+      "name": "Cais de Embarque de Moliceiros",
+      "data": "3-1-2022",
+      "address": "Rua de Viana do Castelo, 3800-275 Aveiro",
+      "coordinates": [40.641279446308594, -8.655670881271364]
+    },
+    {
+      "id": 8,
+      "name": "Praia da Barra",
+      "data": "10-1-2022",
+      "address": "Lgo do Farol 1, 3830-763 Gafanha da Nazaré",
+      "coordinates": [40.642826230729845, -8.747531175613405]
     }
   ]
 }
