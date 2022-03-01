@@ -33,7 +33,7 @@ export function AppContainer({ children }) {
             avatar: user.photoURL,
             name: user.displayName,
             email: user.email,
-          }).then(console.log(addResults));
+          });
           dispatch(
             setUser({
               uid: user.uid,
