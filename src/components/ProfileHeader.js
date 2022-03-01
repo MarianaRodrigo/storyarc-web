@@ -12,7 +12,7 @@ export function ProfileHeader({ user }) {
       />
       <div className="absolute flex flex-row w-full h-full bg-gradient-to-t from-white to-transparent" />
 
-      <div className="absolute w-24 h-24 top-[30%] left-8 border-4 rounded-full">
+      <div className="absolute w-24 h-24 bottom-[29%] left-8 border-4 rounded-full">
         <Image
           src={user.avatar ? user.avatar : "/images/user_img.png"}
           alt={user.name}
