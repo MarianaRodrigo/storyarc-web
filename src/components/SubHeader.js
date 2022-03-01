@@ -29,17 +29,13 @@ export function SubHeader() {
           Conteúdos Recentes
         </h1>
       </div>
-      {/* <Link href="./InsertContent" passHref> */}
-      {/* <a> */}
       <FontAwesomeIcon
         onClick={() => dispatch(setAddContent(true))}
-        className="w-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
+        className="w-8 h-8 hover:scale-125 transition duration-300 ease-out cursor-pointer"
         data-modal-toggle="defaultModal"
         style={{ color: "#37b780" }}
         icon={faCirclePlus}
       />
-      {/* </a> */}
-      {/* </Link> */}
       {isShowing && <InsertContent />}
     </Transition>
   );
