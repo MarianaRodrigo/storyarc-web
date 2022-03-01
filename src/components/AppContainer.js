@@ -8,11 +8,13 @@ import MapBoxMap from "./MapBoxMap";
 import { useDispatch } from "react-redux";
 import { setUser } from "../features/user/userSlice";
 import { setBarState } from "../features/bar/barSlice";
+import { useAddUserMutation } from "../services/storyarc";
 //firebase
 import { auth } from "../firebase/firebase";
 
 export function AppContainer({ children }) {
   const dispatch = useDispatch();
+  const [addUser, addResults] = useAddUserMutation();
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
@@ -26,6 +28,12 @@ export function AppContainer({ children }) {
             })
           );
         } else {
+          addUser({
+            id: user.uid,
+            avatar: user.photoURL,
+            name: user.displayName,
+            email: user.email,
+          }).then(console.log(addResults));
           dispatch(
             setUser({
               uid: user.uid,

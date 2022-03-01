@@ -34,6 +34,13 @@ export const StoryArc_API = createApi({
         body: comment,
       }),
     }),
+    addUser: builder.mutation({
+      query: (user) => ({
+        url: `users`,
+        method: "POST",
+        body: user,
+      }),
+    }),
   }),
 });
 
@@ -46,4 +53,5 @@ export const {
   useGetCommentOwnerQuery,
   useGetLocationsQuery,
   useAddCommentMutation,
+  useAddUserMutation,
 } = StoryArc_API;
