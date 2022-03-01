@@ -106,7 +106,7 @@ export default function Photo(props) {
         <aside className="flex">
           {files.map((file, i) => (
             <div
-              className="grow border border-sky-500"
+              className="grow border border-verde"
               onClick={() => removeImage(i)}
               key={file.name}
               style={{
