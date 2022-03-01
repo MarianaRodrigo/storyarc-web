@@ -55,7 +55,7 @@ export function InsertComment({ postId, refetch }) {
     >
       <div className="relative h-10 w-10 flex-none">
         <Image
-          src={currentUser.avatar}
+          src={currentUser.avatar ? currentUser.avatar : "/images/user_img.png"}
           alt={currentUser.name}
           layout="fill"
           priority
