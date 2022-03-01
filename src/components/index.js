@@ -21,7 +21,6 @@ export { InsertContent } from "./InsertContent";
 export { LocationPostHeader } from "./LocationPostHeader";
 //PROFILE
 export { ProfileHeader } from "./ProfileHeader";
-export { ProfileDescription } from "./ProfileDescription";
 export { SignedInBar } from "./SignedInBar";
 export { SignedOutBar } from "./SignedOutBar";
 export { LogIn } from "./LogIn";

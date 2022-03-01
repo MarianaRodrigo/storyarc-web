@@ -23,6 +23,7 @@ module.exports = {
       "www.teatroaveirense.pt",
       "lh3.googleusercontent.com",
       "3.bp.blogspot.com",
+      "images.unsplash.com",
     ],
   },
 };

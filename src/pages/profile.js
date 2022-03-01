@@ -28,7 +28,7 @@ export default function Profile() {
       {currentUser && (
         <>
           <ProfileHeader user={currentUser} />
-          <ProfileDescription user={currentUser} />
+
           <ProfileContent />
           {/* {post && <FeedContainer>
             {post.posts.map(post => <Card key={post.id} post={post} />)}
