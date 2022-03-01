@@ -82,14 +82,6 @@ export default function Post() {
         ) : (
           <EmptyCommentsSection />
         )}
-
-        {/* {comments.length > 0 ? (
-          comments.map((comment) => (
-            <CommentCell key={comment.id} comment={comment} />
-          ))
-        ) : (
-          <EmptyCommentsSection />
-        )} */}
       </CommentsContainer>
     </div>
   );
