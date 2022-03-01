@@ -2,6 +2,7 @@ import { Transition } from "@headlessui/react";
 import Logo from "./Logo";
 import Search from "./Search";
 
+
 export function Header() {
   return (
     <Transition
