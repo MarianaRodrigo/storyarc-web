@@ -24,6 +24,7 @@ module.exports = {
       "lh3.googleusercontent.com",
       "3.bp.blogspot.com",
       "images.unsplash.com",
+      "i.pinimg.com",
     ],
   },
 };
