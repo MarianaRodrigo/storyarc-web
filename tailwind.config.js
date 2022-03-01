@@ -11,6 +11,9 @@ module.exports = {
         preto: "#000000",
         branco: "#FFFFFF",
       },
+      fontFamily: { 
+        body: ['Poppins']
+      },
     },
   },
   plugins: [],
