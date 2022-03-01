@@ -80,7 +80,7 @@ export default function Post() {
             <CommentCell key={comment.id} comment={comment} />
           ))
         ) : (
-          <EmptyCommentsSection />
+          <EmptyCommentsSection text="Sem comentários" />
         )}
       </CommentsContainer>
     </div>

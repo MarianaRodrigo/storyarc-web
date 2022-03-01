@@ -24,11 +24,10 @@ export default function Profile() {
   }, [currentUser]);
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 overflow-y-scroll overscroll-y-auto">
       {currentUser && (
         <>
           <ProfileHeader user={currentUser} />
-
           <ProfileContent />
           {/* {post && <FeedContainer>
             {post.posts.map(post => <Card key={post.id} post={post} />)}

@@ -16,7 +16,11 @@ export const StoryArc_API = createApi({
       query: ({ postId }) => `posts/${postId}/comments`,
     }),
     getUserPosts: builder.query({
-      query: ({ uid }) => `users/${uid}/posts`,
+      query: ({ uid }) =>
+        `posts?_expand=user&userId=vlBJfbmG6iNl86pQJhkNldJG0A52`,
+    }),
+    getUserSavedPosts: builder.query({
+      query: () => `/users/vlBJfbmG6iNl86pQJhkNldJG0A52/savedPosts/`, //-> static for now
     }),
     getSearchResults: builder.query({
       query: ({ rua }) => `posts?streetName=${rua}&_expand=user`,
@@ -49,6 +53,7 @@ export const {
   useGetPostWithUserAndCommentsDataQuery,
   useGetPostCommentsQuery,
   useGetUserPostsQuery,
+  useGetUserSavedPostsQuery,
   useGetSearchResultsQuery,
   useGetCommentOwnerQuery,
   useGetLocationsQuery,
