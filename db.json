@@ -181,6 +181,40 @@
       "streetName": "Teatro Aveirense",
       "contentDate": "1950",
       "createdAt": "2022-02-17T19:36:41.388Z"
+    },
+    {
+      "userId": "vlBJfbmG6iNl86pQJhkNldJG0A52",
+      "postType": "foto",
+      "title": "Farol da Barra",
+      "description": "O Forte da Barra",
+      "photo": "https://pbs.twimg.com/media/FMT1UUNWYAYPWj7?format=jpg&name=900x900",
+      "altimg": "Farol Barra",
+      "new_photo": null,
+      "streetName": "Lgo do Farol 1",
+      "location": [
+        40.642826230729845,
+        -8.747531175613405
+      ],
+      "contentDate": "1920",
+      "createdAt": "2022-02-26T19:36:41.388Z",
+      "id": 14
+    },
+    {
+      "userId": "BH36JfGgYEPn4Ij1WzVCynePsbz2",
+      "postType": "foto",
+      "title": "Canal Central em Festa",
+      "description": "Festa no Canal Central",
+      "photo": "https://pbs.twimg.com/media/FMjSFjuWQAEFxI3?format=jpg&name=medium",
+      "altimg": "Canal Central",
+      "new_photo": null,
+      "streetName": "Rua de Viana do Castelo, 3800-275 Aveiro",
+      "location": [
+        40.641279446308594, 
+        -8.655670881271364
+      ],
+      "contentDate": "1930",
+      "createdAt": "2022-02-26T19:36:41.388Z",
+      "id": 15
     }
   ],
   "users": [
@@ -399,17 +433,17 @@
     },
     {
       "id": 7,
-      "name": "Cais de Embarque de Moliceiros",
-      "data": "3-1-2022",
-      "address": "Rua de Viana do Castelo, 3800-275 Aveiro",
-      "coordinates": [40.641279446308594, -8.655670881271364]
-    },
-    {
-      "id": 8,
       "name": "Praia da Barra",
       "data": "10-1-2022",
       "address": "Lgo do Farol 1, 3830-763 Gafanha da Nazaré",
       "coordinates": [40.642826230729845, -8.747531175613405]
+    },
+    {
+      "id": 8,
+      "name": "Cais de Embarque de Moliceiros",
+      "data": "3-1-2022",
+      "address": "Rua de Viana do Castelo, 3800-275 Aveiro",
+      "coordinates": [40.641279446308594, -8.655670881271364]
     }
   ]
 }
