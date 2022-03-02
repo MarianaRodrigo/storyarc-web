@@ -35,6 +35,7 @@ export function Card({ post, isSaved }) {
             alt={post.name}
             layout="fill"
             className="rounded-l-lg bg-cover"
+            priority
           />
         </div>
         <div className="w-3/5 flex flex-col justify-between py-2">
