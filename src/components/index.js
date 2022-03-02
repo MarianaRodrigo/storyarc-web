@@ -25,3 +25,10 @@ export { SignedInBar } from "./SignedInBar";
 export { SignedOutBar } from "./SignedOutBar";
 export { LogIn } from "./LogIn";
 export { ProfileContent } from "./ProfileContent";
+//AppContainer
+export { MapBoxMap } from "./MapBoxMap";
+//HEADER
+export { Logo } from "./Logo";
+export { Search } from "./Search";
+//InsertContent
+export { Photo } from "./AddPhoto";

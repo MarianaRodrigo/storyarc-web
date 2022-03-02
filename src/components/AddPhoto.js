@@ -26,7 +26,7 @@ const rejectStyle = {
   borderColor: "#ff1744",
 };
 
-export default function Photo(props) {
+export function Photo(props) {
   const [files, setFiles] = useState([]);
 
   const {
@@ -129,4 +129,3 @@ export default function Photo(props) {
 }
 
 <Photo />;
-

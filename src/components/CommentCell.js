@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useGetCommentOwnerQuery } from "../services/storyarc";
-import db from "../../db.json";
 
 export function CommentCell({ comment }) {
   const {

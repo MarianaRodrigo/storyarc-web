@@ -3,7 +3,7 @@ import Link from "next/link";
 import Map, { Marker } from "react-map-gl";
 import { useGetLocationsQuery } from "../services/storyarc";
 
-export default function MapBoxMap() {
+export function MapBoxMap() {
   const { data: locations, isFetching } = useGetLocationsQuery();
 
   if (isFetching) {

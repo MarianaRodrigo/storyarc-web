@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useClickOutside } from "@mantine/hooks";
 import { useDispatch } from "react-redux";
 import { setAddContent } from "../features/addContent/addSlice";
-import Photo from "./AddPhoto";
+import { Photo } from "./";
 
 export function InsertContent() {
   const dispatch = useDispatch();

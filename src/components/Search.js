@@ -14,7 +14,7 @@ import {
 //db
 import db from "../../db.json";
 
-export default function Search() {
+export function Search() {
   const dispatch = useDispatch();
   const searchRef = useRef("");
   const [searchResults, setSearchResults] = useState([]);

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 //next imports
 import Link from "next/link";
+import Image from "next/image";
 import { Transition } from "@headlessui/react";
 //utils
 import { timeSince } from "../utils/timeSince";
@@ -28,15 +29,14 @@ export function Card({ post, isSaved }) {
         leaveTo="opacity-0 translate-x-full"
         className="hover:scale-95 ease-out duration-300 cursor-pointer pr-4 mx-4 h-36 bg-white shadow-xl hover:shadow-sm flex border rounded-lg"
       >
-        <div
-          className="w-2/5 rounded-l-lg"
-          style={{
-            backgroundImage: `url(${post.photo})`,
-            backgroundSize: "180%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        ></div>
+        <div className="w-2/5 rounded-l-lg relative">
+          <Image
+            src={post.photo}
+            alt={post.name}
+            layout="fill"
+            className="rounded-l-lg bg-cover"
+          />
+        </div>
         <div className="w-3/5 flex flex-col justify-between py-2">
           <div className="flex justify-between">
             <h1 className="flex flex-grow pl-3 font-medium text-md cursor-pointer">

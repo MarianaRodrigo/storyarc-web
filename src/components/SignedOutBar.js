@@ -21,13 +21,3 @@ export function SignedOutBar() {
     </div>
   );
 }
-
-/*  <div className="flex items-center px-4 py-2 bg-white text-black rounded-md hover:scale-105 transition duration-105 ease-out">
-        <Image
-          src="/images/glogo.png"
-          alt="google logo"
-          width="24rem"
-          height="24rem"
-        />
-        <span>Iniciar sessão com o Google</span>
-      </div> */

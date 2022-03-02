@@ -31,7 +31,6 @@ export function SubHeader() {
           Conteúdos Recentes
         </h1>
       </div>
-
       <Transition
         show={user ? true : false}
         enter="transition ease duration-200 transform"
@@ -49,7 +48,6 @@ export function SubHeader() {
           icon={faCirclePlus}
         />
       </Transition>
-
       {isShowing && <InsertContent />}
     </Transition>
   );
