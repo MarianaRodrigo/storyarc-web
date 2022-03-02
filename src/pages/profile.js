@@ -1,17 +1,12 @@
 //imports
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { Transition } from "@headlessui/react";
 //redux
 import { useSelector } from "react-redux";
 import { useUser } from "../features/user/userSlice";
 //components
-import {
-  ProfileHeader,
-  ProfileDescription,
-  ProfileContent,
-  FeedContainer,
-  Card,
-} from "../components";
+import { ProfileHeader, ProfileContent } from "../components";
 
 export default function Profile() {
   const currentUser = useSelector(useUser);
@@ -24,16 +19,23 @@ export default function Profile() {
   }, [currentUser]);
 
   return (
-    <div className="flex-1 overflow-y-scroll overscroll-y-auto">
+    <Transition
+      appear={true}
+      show={true}
+      enter="transition ease duration-700 transform"
+      enterFrom="opacity-0 translate-y-full"
+      enterTo="opacity-100 translate-y-0"
+      leave="transition ease duration-1000 transform"
+      leaveFrom="opacity-100 translate-y-0"
+      leaveTo="opacity-0 translate-y-full"
+      className="flex-1 overflow-y-scroll overscroll-y-auto"
+    >
       {currentUser && (
         <>
           <ProfileHeader user={currentUser} />
           <ProfileContent />
-          {/* {post && <FeedContainer>
-            {post.posts.map(post => <Card key={post.id} post={post} />)}
-          </FeedContainer>} */}
         </>
       )}
-    </div>
+    </Transition>
   );
 }
