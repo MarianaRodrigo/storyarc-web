@@ -39,9 +39,11 @@ export function Card({ post, isSaved }) {
           />
         </div>
         <div className="w-3/5 flex flex-col justify-between py-2">
-          <div className="flex justify-between">
+          <div className="flex justify-between max-h-12 overflow-hidden">
             <h1 className="flex flex-grow pl-3 font-medium text-md cursor-pointer">
-              {post.title}
+              {post.title.length > 33
+                ? post.title.slice(0, 33) + "..."
+                : post.title}
             </h1>
             {isSaved ? (
               <svg
@@ -74,7 +76,7 @@ export function Card({ post, isSaved }) {
           </div>
           <div className="flex items-center pt-5 pl-3 space-x-2">
             <img
-              className="w-10 h-10 rounded-full"
+              className="w-10 h-10 rounded-full border border-verde"
               src={post.user.avatar}
               alt={post.name}
             />
