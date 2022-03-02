@@ -28,7 +28,7 @@ export default function Profile() {
       leave="transition ease duration-1000 transform"
       leaveFrom="opacity-100 translate-y-0"
       leaveTo="opacity-0 translate-y-full"
-      className="flex-1 overflow-y-scroll overscroll-y-auto"
+      className="flex-1 overflow-y-scroll overscroll-y-auto pb-20"
     >
       {currentUser && (
         <>

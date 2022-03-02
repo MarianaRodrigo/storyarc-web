@@ -40,7 +40,11 @@ export function ProfileContent() {
         {userPostsFetching || userPostsLoading ? (
           <></>
         ) : userPosts.length > 0 ? (
-          userPosts.map((post) => <Card key={post.id} post={post} />)
+          <div className="space-y-4">
+            {userPosts.map((post) => (
+              <Card key={post.id} post={post} />
+            ))}
+          </div>
         ) : (
           <EmptyCommentsSection text="Sem Publicações" />
         )}

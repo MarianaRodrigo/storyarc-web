@@ -11,12 +11,6 @@ export function Footer() {
   const user = useSelector(useUser);
   const isExpanded = useSelector(useBarState);
 
-  const inheritClass = {
-    postion: "fixed",
-    bottom: 0,
-    width: "inherit",
-  };
-
   function onKeyDown(e) {
     if (e.key === "Escape") {
       dispatch(setBarState(false));
@@ -36,7 +30,7 @@ export function Footer() {
   }, []);
 
   return (
-    <div ref={ref} className="fixed bottom-0">
+    <div ref={ref} style={{ position: "fixed", width: "inherit", bottom: 0 }}>
       <Transition
         appear={true}
         show={true}
