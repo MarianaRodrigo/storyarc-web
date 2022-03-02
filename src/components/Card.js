@@ -85,6 +85,8 @@ export function Card({ post, isSaved }) {
                 Publicado{" "}
                 {timeSince(post.createdAt) === "ontem"
                   ? timeSince(post.createdAt)
+                  : timeSince(post.createdAt) === "semana passada"
+                  ? "na " + timeSince(post.createdAt)
                   : "há " + timeSince(post.createdAt)}
               </p>
             </div>
