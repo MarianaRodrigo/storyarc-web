@@ -12,9 +12,9 @@ export function Footer() {
   const isExpanded = useSelector(useBarState);
 
   const inheritClass = {
-    position: "fixed",
-    width: "inherit",
+    postion: "fixed",
     bottom: 0,
+    width: "inherit",
   };
 
   function onKeyDown(e) {
@@ -36,7 +36,7 @@ export function Footer() {
   }, []);
 
   return (
-    <div ref={ref} className="w-full">
+    <div ref={ref} className={inheritClass}>
       <Transition
         appear={true}
         show={true}
@@ -47,11 +47,10 @@ export function Footer() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-full"
         className={
-          " flex px-4 items-center justify-between rounded-t-md duration-[250ms] ease-in-out transition-all " +
+          "flex px-4 items-center justify-between rounded-t-md duration-[250ms] ease-in-out transition-all " +
           (isExpanded
             ? "h-96 bg-white border-t-2 drop-shadow-md"
-            : "h-16 bg-[#37b780] text-white ") +
-          inheritClass
+            : "h-16 bg-[#37b780] text-white ")
         }
       >
         {user ? <SignedInBar /> : isExpanded ? <LogIn /> : <SignedOutBar />}
