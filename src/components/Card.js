@@ -83,9 +83,11 @@ export function Card({ post, isSaved }) {
               </p>
               <p className="text-gray-400  tracking-wide text-[0.70rem]">
                 Publicado{" "}
-                {timeSince(post.createdAt) === "ontem"
-                  ? timeSince(post.createdAt)
-                  : "há " + timeSince(post.createdAt)}
+                {timeSince(post.postDate) === "ontem"
+                  ? timeSince(post.postDate)
+                  : timeSince(post.postDate) === "semana passada"
+                  ? "na " + timeSince(post.postDate)
+                  : "há " + timeSince(post.postDate)}
               </p>
             </div>
           </div>
