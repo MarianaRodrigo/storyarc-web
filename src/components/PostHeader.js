@@ -30,11 +30,11 @@ export function PostHeader({ date, user, postType }) {
           <p className="font-medium text-sm tracking-wide">{user.name}</p>
           <p className="text-xs font-light tracking-wide">
             Publicado{" "}
-            {timeSince(post.postDate) === "ontem"
-              ? timeSince(post.postDate)
-              : timeSince(post.postDate) === "semana passada"
-              ? "na " + timeSince(post.postDate)
-              : "há " + timeSince(post.postDate)}
+            {timeSince(post.createdAt) === "ontem" || "agora mesmo"
+              ? timeSince(post.createdAt)
+              : timeSince(post.createdAt) === "semana passada"
+              ? "na " + timeSince(post.createdAt)
+              : "há " + timeSince(post.createdAt)}
           </p>
         </div>
       </div>
