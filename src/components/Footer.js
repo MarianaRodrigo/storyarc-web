@@ -36,7 +36,7 @@ export function Footer() {
   }, []);
 
   return (
-    <div ref={ref} className={inheritClass}>
+    <div ref={ref} className="fixed bottom-0">
       <Transition
         appear={true}
         show={true}
