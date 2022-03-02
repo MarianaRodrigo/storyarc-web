@@ -30,7 +30,7 @@ export function Footer() {
   }, []);
 
   return (
-    <div ref={ref} style={{ position: "fixed", width: "inherit", bottom: 0 }}>
+    <div ref={ref} style={{ position: "sticky", width: "inherit", bottom: 0 }}>
       <Transition
         appear={true}
         show={true}
