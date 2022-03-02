@@ -31,7 +31,7 @@
     {
       "id": 3,
       "userId": 3,
-      "postType": "comparacao",
+      "postType": "foto",
       "title": "Praça do comércio",
       "description": null,
       "photo": "https://pbs.twimg.com/media/FKx_HAJXIAMe8Ua?format=jpg&name=medium",
@@ -101,7 +101,7 @@
     {
       "id": 8,
       "userId": 5,
-      "postType": "comparação",
+      "postType": "foto",
       "title": "Universidade de Aveiro na década de 80",
       "description": null,
       "photo": "https://api-assets.ua.pt/v1/image/resizer?imageUrl=https://www.ua.pt/contents%2Fimgs%2Fabout%2Fhistoria_ua_1980.jpg&width=768",
@@ -115,7 +115,7 @@
     {
       "id": 9,
       "userId": 5,
-      "postType": "comparação",
+      "postType": "foto",
       "title": "Universidade de Aveiro na década de 80",
       "description": null,
       "photo": "https://api-assets.ua.pt/v1/image/resizer?imageUrl=https://www.ua.pt/contents%2Fimgs%2Fabout%2Fhistoria_ua_1980_2.jpg&width=768",
@@ -129,7 +129,7 @@
     {
       "id": 10,
       "userId": 5,
-      "postType": "comparação",
+      "postType": "foto",
       "title": "Universidade de Aveiro na década de 90",
       "description": null,
       "photo": "https://api-assets.ua.pt/v1/image/resizer?imageUrl=https://www.ua.pt/contents%2Fimgs%2Fabout%2Fhistoria_ua_1990_3.jpg&width=768",
@@ -143,7 +143,7 @@
     {
       "id": 11,
       "userId": 5,
-      "postType": "comparação",
+      "postType": "foto",
       "title": "Universidade de Aveiro na década de 90",
       "description": null,
       "photo": "https://api-assets.ua.pt/v1/image/resizer?imageUrl=https://www.ua.pt/contents%2Fimgs%2Fabout%2Fhistoria_ua_1990_4.jpg&width=768",
@@ -190,11 +190,8 @@
       "photo": "https://pbs.twimg.com/media/FMT1UUNWYAYPWj7?format=jpg&name=900x900",
       "altimg": "Farol Barra",
       "new_photo": null,
-      "streetName": "Lgo do Farol 1",
-      "location": [
-        40.642826230729845,
-        -8.747531175613405
-      ],
+      "streetName": "Praia da Barra",
+      "location": [40.642826230729845, -8.747531175613405],
       "contentDate": "1920",
       "createdAt": "2022-02-26T19:36:41.388Z",
       "id": 14
@@ -207,14 +204,24 @@
       "photo": "https://pbs.twimg.com/media/FMjSFjuWQAEFxI3?format=jpg&name=medium",
       "altimg": "Canal Central",
       "new_photo": null,
-      "streetName": "Rua de Viana do Castelo, 3800-275 Aveiro",
-      "location": [
-        40.641279446308594, 
-        -8.655670881271364
-      ],
+      "streetName": "Cais de Embarque de Moliceiros",
+      "location": [40.641279446308594, -8.655670881271364],
       "contentDate": "1930",
       "createdAt": "2022-02-26T19:36:41.388Z",
       "id": 15
+    },
+    {
+      "id": 16,
+      "userId": 5,
+      "postType": "comparacao",
+      "title": "UA nos anos 2000 vs UA atualmente 😍 Consegue ver as diferenças?",
+      "description": "UA nos anos 2000 vs UA atualmente 😍 Consegue ver as diferenças?",
+      "photo": "https://media-exp1.licdn.com/dms/image/C4D22AQEkygNKGOhZSA/feedshare-shrink_1280/0/1644670835599?e=1648080000&v=beta&t=J9ekvchQycb0pLQvzrFITJGm5QuNzOLyp8WPd83G2LM",
+      "new_photo": "https://media-exp1.licdn.com/dms/image/C4D22AQGZWzoevj184Q/feedshare-shrink_1280/0/1644670838439?e=1648080000&v=beta&t=A87zpGBeDJmS_A4j79kkKeotvFHek4IB3d5FrBxqEx0",
+      "location": [40.6376416868948, -8.648330328603409],
+      "streetName": "Universidade de Aveiro",
+      "contentDate": "1960",
+      "postDate": "2022-02-16T19:36:41.388Z"
     }
   ],
   "users": [
@@ -234,7 +241,7 @@
     },
     {
       "id": 3,
-      "name": "Paula Cardodoso",
+      "name": "Paula Cardoso",
       "password": "123",
       "email": "paulacardoso@gmail.com",
       "avatar": "https://randomuser.me/api/portraits/women/79.jpg"
@@ -280,6 +287,18 @@
       "password": "123",
       "email": "TeatroAveirense@gmail.com",
       "avatar": "https://reencontrosdemusicacontemporanea.pt/2017/images/apoios/TA.png"
+    },
+    {
+      "id": "vlBJfbmG6iNl86pQJhkNldJG0A52",
+      "avatar": "https://lh3.googleusercontent.com/a-/AOh14Gh6dfOfIa2bIeA9aMRA1ENG9A36mKbPZFMkr_CCww=s96-c",
+      "name": "Pedro Miguel Pereira",
+      "email": "pedromcdp@gmail.com"
+    },
+    {
+      "id": "BH36JfGgYEPn4Ij1WzVCynePsbz2",
+      "avatar": "https://lh3.googleusercontent.com/a-/AOh14GjEPY4AZKZ19jhP9GVwwbN2-ibXN3oM6uiZhwzuMA=s96-c",
+      "name": "David Silva",
+      "email": "david.jarbas77@gmail.com"
     }
   ],
   "comments": [
@@ -423,13 +442,6 @@
       "data": "17-9-2005",
       "address": "Praceta Ria de Aveiro, 3800-257 Aveiro",
       "coordinates": [40.6453974473121, -8.654480643946753]
-    },
-    {
-      "id": 6,
-      "name": "Universidade de Coimbra",
-      "data": "20-1-2022",
-      "address": "Paço das Escolas,3004-531 Coimbra",
-      "coordinates": [40.207422, -8.4260033]
     },
     {
       "id": 7,
