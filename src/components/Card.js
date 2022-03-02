@@ -34,7 +34,7 @@ export function Card({ post, isSaved }) {
             src={post.photo}
             alt={post.name}
             layout="fill"
-            className="rounded-l-lg bg-cover"
+            className="rounded-l-lg object-cover"
             priority
           />
         </div>
