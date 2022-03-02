@@ -115,7 +115,7 @@
     {
       "id": 9,
       "userId": 5,
-      "postType": "comparação",
+      "postType": "foto",
       "title": "Universidade de Aveiro na década de 80",
       "description": null,
       "photo": "https://api-assets.ua.pt/v1/image/resizer?imageUrl=https://www.ua.pt/contents%2Fimgs%2Fabout%2Fhistoria_ua_1980_2.jpg&width=768",
@@ -129,7 +129,7 @@
     {
       "id": 10,
       "userId": 5,
-      "postType": "comparação",
+      "postType": "foto",
       "title": "Universidade de Aveiro na década de 90",
       "description": null,
       "photo": "https://api-assets.ua.pt/v1/image/resizer?imageUrl=https://www.ua.pt/contents%2Fimgs%2Fabout%2Fhistoria_ua_1990_3.jpg&width=768",
@@ -143,7 +143,7 @@
     {
       "id": 11,
       "userId": 5,
-      "postType": "comparação",
+      "postType": "foto",
       "title": "Universidade de Aveiro na década de 90",
       "description": null,
       "photo": "https://api-assets.ua.pt/v1/image/resizer?imageUrl=https://www.ua.pt/contents%2Fimgs%2Fabout%2Fhistoria_ua_1990_4.jpg&width=768",
@@ -200,7 +200,7 @@
     },
     {
       "id": 3,
-      "name": "Paula Cardodoso",
+      "name": "Paula Cardoso",
       "password": "123",
       "email": "paulacardoso@gmail.com",
       "avatar": "https://randomuser.me/api/portraits/women/79.jpg"

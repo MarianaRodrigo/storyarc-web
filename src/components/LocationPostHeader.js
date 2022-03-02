@@ -13,14 +13,12 @@ export function LocationPostHeader({ location }) {
       leave="transition ease duration-1000 transform"
       leaveFrom="opacity-100 translate-x-0"
       leaveTo="opacity-0 translate-x-full"
-      className="mx-4 my-6 leading-loose"
+      className="mx-4 mt-3 mb-5 leading-loose flex flex-col"
     >
-      <h1 className="text-base font-light tracking-wide pb-2">
-        Publicações em
-      </h1>
-      <div className="flex">
-        <FontAwesomeIcon className="w-5" icon={faLocationDot} />
-        <h1 className="text-xl tracking-wide font-medium px-2">{location}</h1>
+      <h1 className="font-light tracking-wide">Publicações em</h1>
+      <div className="flex items-center space-x-1">
+        <FontAwesomeIcon className="w-5 h-5" icon={faLocationDot} />
+        <h1 className="text-xl tracking-wide font-medium">{location}</h1>
       </div>
     </Transition>
   );
