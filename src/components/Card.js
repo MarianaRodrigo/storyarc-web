@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 //next imports
 import Link from "next/link";
+import Image from "next/image";
 import { Transition } from "@headlessui/react";
 //utils
 import { timeSince } from "../utils/timeSince";
@@ -28,19 +29,21 @@ export function Card({ post, isSaved }) {
         leaveTo="opacity-0 translate-x-full"
         className="hover:scale-95 ease-out duration-300 cursor-pointer pr-4 mx-4 h-36 bg-white shadow-xl hover:shadow-sm flex border rounded-lg"
       >
-        <div
-          className="w-2/5 rounded-l-lg"
-          style={{
-            backgroundImage: `url(${post.photo})`,
-            backgroundSize: "180%",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        ></div>
+        <div className="w-2/5 rounded-l-lg relative">
+          <Image
+            src={post.photo}
+            alt={post.name}
+            layout="fill"
+            className="rounded-l-lg object-cover"
+            priority
+          />
+        </div>
         <div className="w-3/5 flex flex-col justify-between py-2">
-          <div className="flex justify-between">
+          <div className="flex justify-between max-h-12 overflow-hidden">
             <h1 className="flex flex-grow pl-3 font-medium text-md cursor-pointer">
-              {post.title}
+              {post.title.length > 33
+                ? post.title.slice(0, 33) + "..."
+                : post.title}
             </h1>
             {isSaved ? (
               <svg
@@ -73,7 +76,7 @@ export function Card({ post, isSaved }) {
           </div>
           <div className="flex items-center pt-5 pl-3 space-x-2">
             <img
-              className="w-10 h-10 rounded-full"
+              className="w-10 h-10 rounded-full border border-verde"
               src={post.user.avatar}
               alt={post.name}
             />
@@ -85,6 +88,8 @@ export function Card({ post, isSaved }) {
                 Publicado{" "}
                 {timeSince(post.createdAt) === "ontem"
                   ? timeSince(post.createdAt)
+                  : timeSince(post.createdAt) === "semana passada"
+                  ? "na " + timeSince(post.createdAt)
                   : "há " + timeSince(post.createdAt)}
               </p>
             </div>

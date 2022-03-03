@@ -1,7 +1,6 @@
 //next imports
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 //packages
 import { Transition } from "@headlessui/react";
 import { auth } from "../firebase/firebase";
@@ -12,7 +11,6 @@ import { useUser } from "../features/user/userSlice";
 
 export function SignedInBar() {
   const user = useSelector(useUser);
-  const router = useRouter();
 
   function logOut() {
     auth.signOut();
@@ -39,11 +37,11 @@ export function SignedInBar() {
             className="rounded-full"
           />
         </div>
-        <p className="font-medium">{user.name}</p>
+        <p className="font-medium leading-none">{user.name}</p>
       </div>
       <div className="flex items-center space-x-3">
         <Link href="/profile" passHref>
-          <button className="bg-white text-verde px-4 h-10 rounded-md font-medium text-sm hover:scale-105 transition duration-300 ease-out">
+          <button className="bg-white text-verde px-4 h-10 rounded-md font-medium text-sm hover:scale-105 transition duration-300 ease-out leading-4">
             Ver perfil
           </button>
         </Link>

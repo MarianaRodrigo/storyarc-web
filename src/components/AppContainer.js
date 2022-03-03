@@ -3,7 +3,7 @@ import { useEffect } from "react";
 //next imports
 import Head from "next/head";
 //components
-import MapBoxMap from "./MapBoxMap";
+import { MapBoxMap } from "./";
 //redux
 import { useDispatch } from "react-redux";
 import { setUser } from "../features/user/userSlice";
@@ -14,7 +14,7 @@ import { auth } from "../firebase/firebase";
 
 export function AppContainer({ children }) {
   const dispatch = useDispatch();
-  const [addUser, addResults] = useAddUserMutation();
+  const [addUser] = useAddUserMutation();
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {

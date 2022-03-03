@@ -4,9 +4,7 @@ export function ProfileHeader({ user }) {
   return (
     <div className="mt-6 h-72 relative">
       <Image
-        src={
-          "https://images.unsplash.com/photo-1559681584-03c381b53ed1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8"
-        }
+        src={"/images/profileBg.png"}
         alt="Moliceiro na ria de Aveiro"
         layout="fill"
       />

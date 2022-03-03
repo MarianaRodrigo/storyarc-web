@@ -71,6 +71,7 @@ export default function CriarConta() {
             alt="google logo"
             width="24rem"
             height="24rem"
+            priority
           />
           <span className="text-sm tracking-wide">
             Inicia sessão com o Google

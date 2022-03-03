@@ -32,7 +32,9 @@ export function PostHeader({ date, user, postType }) {
             Publicado{" "}
             {timeSince(date) === "ontem"
               ? timeSince(date)
-              : "na " + timeSince(date)}
+              : timeSince(date) === "semana passada"
+              ? "na " + timeSince(date)
+              : "há " + timeSince(date)}
           </p>
         </div>
       </div>

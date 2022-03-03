@@ -25,6 +25,7 @@ module.exports = {
       "3.bp.blogspot.com",
       "images.unsplash.com",
       "i.pinimg.com",
+      "media-exp1.licdn.com",
     ],
   },
 };
